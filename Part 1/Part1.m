@@ -14,8 +14,6 @@ v = sin(x);
 
 [vmax, vmin, vlinf, vl1, vl2] = get_info(v);
 
-fid = fopen('v.dat', 'w+');
-fprintf(fid, '%f \t %f \n', [x; v]);
-fclose(fid);
+save_to_file([x;v], 'v.dat');
 
 plot_file('v.dat');
