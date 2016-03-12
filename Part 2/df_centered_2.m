@@ -1,9 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Numerical Modelling
-%Finite Differencing: First Derivative, 1st-order in h
+%Finite Differencing: First Derivative, centered stencil, 2nd-order in h
 %Author: Antonio Peters
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function dfc = df_centered_1(h,f)
+function dfc = df_centered_2(h,f)
 
 f   = [f(end -1), f, f(2)];
 

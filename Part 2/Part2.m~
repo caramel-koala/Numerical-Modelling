@@ -3,20 +3,31 @@
 %Finite Differencing Methods for sin(x)
 %Author: Antonio Peters
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%SETUP
 close all;
 clear all;
 
 x   = grid_gen();
-
 h   = get_h(x);
 
 v   = sin(x);
+%--------------------------------------------------------------------------
+%FUI
+truedf1 = cos(x);
 
-truedf1     = cos(x);
+df1 = df_1(h,v);
+Ed1 = sum(abs(truedf1-df1))/length(x);
 
-truedf2     =
+df1c2   = df_centered_1(h,v);
+Ed1c = sum(abs(truedf1-df1c2))/length(x);
 
-df1 = df_1(h, v);
-Ed1 = sum(abs(truedf1-df1))/length(x)
+% df1s2 = df_sided_1(h,v);
+% Ed1s = sum(abs(truedf1-df1s2))/length(x);
 
-%df1c    = df_centered_1(h,v);
+save_to_file([x; truedf1; df1; df1c2],'df1.dat');
+plot_file('df1.dat');
+
+truedf2 = -sin(x);
+
+df2c2   = df2_centered_2h(h,v);
+Ed2c2   = sum(abs(truedf2-df2c2))/length(x);
