@@ -12,22 +12,25 @@ h   = get_h(x);
 
 v   = sin(x);
 %--------------------------------------------------------------------------
-%FUI
+%FIRST DERIVATIVE
 truedf1 = cos(x);
 
+%a
 df1 = df_1(h,v);
-Ed1 = sum(abs(truedf1-df1))/length(x);
+Ed1 = abs(truedf1-df1);
 
-df1c2   = df_centered_1(h,v);
-Ed1c = sum(abs(truedf1-df1c2))/length(x);
+%b
+df1c2   = df_centered_2(h,v);
+Ed1c2   = abs(truedf1-df1c2);
 
-% df1s2 = df_sided_1(h,v);
-% Ed1s = sum(abs(truedf1-df1s2))/length(x);
+%c
+df1s2   = df_sided_2(h,v);
+Ed1s2   = abs(truedf1-df1s2);
 
-save_to_file([x; truedf1; df1; df1c2],'df1.dat');
+%d
+df1c4   = df_centered_4(h,v);
+Ed1c4   = abs(truedf1-df1c4);
+
+save_to_file([x; truedf1; df1; df1c2; df1s2; df1c4;Ed1;Ed1c2;Ed1s2;Ed1c4],'df1.dat');
 plot_file('df1.dat');
-
-truedf2 = -sin(x);
-
-df2c2   = df2_centered_2h(h,v);
-Ed2c2   = sum(abs(truedf2-df2c2))/length(x);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

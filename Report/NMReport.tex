@@ -1,0 +1,56 @@
+%-------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass{article}% A4 paper and 11pt font size
+
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{mcode} %Include Matlab code
+%-------------------------------------------------------------------------------
+%	TITLE SECTION
+%-------------------------------------------------------------------------------
+
+\title{
+\textsc{Numerical Modeling} \\ [25pt] % Your university, school and/or 
+department name(s)
+\huge Semester Report \\ % The assignment title
+}
+
+\author{Antonio Peters} % Your name
+
+\date{\today} % Today's date or a custom date
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle % Print the title
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction and Preliminaries}
+This report will detail the work done for the Numerical Modeling mathematics honors course. Whenever possible, decimal values will be calculated to double precision. Data will generally be stored in a $.dat$, using the $save\_to\_file$ function detailed in Appendix \ref{stf} file which will then be read in and plotted with the function $plot\_file$ seen in Appendix \ref{plotfile}. The report will build up from analyzing the finite difference method, error approximation and convergence, and boundary conditions to understanding time evolutions and the Riemann problem and then will look at Gordinov's method in order to simulate high resolution shock capturing in order to solve Burger's equation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Finite Difference}
+There are several different variants of the  finite difference methods (FDMs), this is dependent on the stencil (number of points being used to determine a single value). The FDM uses Taylor expansion (Appendix \ref{taylor}) to approximate the derivative of a function of finite points using the surrounding points.
+\linebreak
+\linebreak
+The most basic of these is the first order FDMs
+\begin{equation}
+  dv_i = \frac{v_{i+1} - v_i}{h}
+\end{equation}
+so $dv_i \approx \frac{df(x_i)}{dx}$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\appendix
+\section{Mathematical Background}
+\subsection{Taylor Expansion}\label{taylor}
+\section{Utility Functions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Save to File} \label{stf}
+\lstinputlisting{../Part_2/save_to_file.m}
+%----------------------------------------------------------------------
+\subsection{Plot File} \label{plotfile}
+\lstinputlisting{../Part_2/plot_file.m}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
