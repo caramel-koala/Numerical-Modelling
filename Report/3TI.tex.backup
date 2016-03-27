@@ -1,0 +1,67 @@
+\chapter{Time Integration}
+In this chapter, the evolution of an equation will be analyzed by looking at the time evolutions of two Partial Differential Equations (PDEs), namely the Advection Equation (Equation \ref{adveq}) and the Wave Equation (Equation \ref{waveeq}).
+\begin{equation} \label{adveq}
+\begin{gathered}
+  u_t + cu_x = 0, \qquad c \in \mathbb{R} \\ 
+  u(x,0) = u_0(x)
+\end{gathered}
+\end{equation}
+\begin{equation} \label{waveeq}
+\begin{gathered}
+  u_{tt} - c^2u_{xx} = 0, \qquad c \in \mathbb{R} \\ 
+  u(x,0) = u_0(x), \qquad u(x,0) = p_0(x)
+\end{gathered}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Characteristic Structure}
+Characteristics are a way of simplifying an equation by changing the coordinates in which the PDE is calculated. It also shows how the information of the PDE propagates with time.
+%-------------------------------------------------------------------
+\subsection{Advection Equation}
+The Advection Equation is a first order PDE (meaning the highest order derivative is in the first order). This means we need only specify one characteristic, $p$. Where $x = x(p)$ and $t = t(p)$ therefore $u = u(x,t) = u(x(p),t(p)) = u(p)$.
+\linebreak
+\linebreak
+By the method of characteristics we can determine that the characteristic equations for the Advection equation are
+\begin{equation}
+ \frac{dx}{dp} = c, \qquad \frac{dt}{dp} = 1, \qquad \frac{du}{dp} = 0
+\end{equation}
+which are then integrated to give
+\begin{equation}
+  x = cp + C_1, \qquad t = p + C_2, \qquad u = C_3
+\end{equation}
+By setting $p=0$ at $t=0$, $C_2$ is set to 0 and $t=p$ everywhere. Setting $x=p$ along $u_0(x)$ gives us 
+\begin{equation}
+ x=cp+q \qquad \text{and} \qquad u=u_0(q).
+\end{equation}
+\linebreak
+\linebreak
+$x=cp+q$ and $t=p$ can be used to give us the characteristic coordinate 
+\begin{equation}
+ q=x-ct
+\end{equation}
+which is a line with a slope of $c$ in the $(x,t)-plane$. Substituting this into $u_0$ gives us
+\begin{equation}
+  u = u_0(x - ct)
+\end{equation}
+%--------------------------------------------------------------------
+\subsection{Wave Equation}
+The Wave Equation is a second order PDE, therefore it has two characteristics. $p$ and
+$q$.By reducing the equation to its canonical form, $u_{pq} = 0$. In this we see that 
+\begin{equation} \label{wavecoords}
+ p = x-ct \qquad \text{and} \qquad q = x + ct
+\end{equation}
+Since $u_{pq} = u_{qp} = 0$ then it follows that $u_p = P(p)$. Let $F(p)$ be an anti-derivative of $P$ therefore $\frac{dF}{dp}(p) = P(p)$ and therefore 
+\begin{equation}
+ \frac{\partial}{\partial p}(u - F(p)) = 0
+\end{equation}
+by integrating both sides, it then follows that
+\begin{equation}
+ u - F(p) = G(q)
+\end{equation}
+and therefore by rearranging and substituting Equation \ref{wavecoords}, we get
+\begin{equation}
+ u(x,t) = F(x-ct) + G(x+ct)
+\end{equation}
+By analyzing this solution and comparing it to that of the Advection Equation, we see that we in fact get two characteristic coordinates which are lines with slopes of $\pm c$.
+%-------------------------------------------------------------------
+\subsection{Spacing}
+Along with finding the characteristics comes the trouble of determining the spacing for the spacial and time axis when plotting. The spacial spacing will be denoted by $h$ and time by $k$. If $h<k$ then the data needed to determine the value of the function at a given point in space and time will require data outside of the bounds of the stencil, conversely if $h>k$ then data between two spacial points is needed to calculate the next value, but this can be interpolated at the cost of calculation time and may yield a higher accuracy. The standard is to set $h=k$ so that the stencil exactly fits the data needed to calculate the next point and every point being used need not be interpolated as it falls on an existing point in the spacing. This can be seen in the figures in Appendix \ref{advcoordimg} for the Advection Equation and in Appendix \ref{wavecoordimg} for the Wave Equation.

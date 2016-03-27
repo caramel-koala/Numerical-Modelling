@@ -31,6 +31,6 @@ Ed1s2   = abs(truedf1-df1s2);
 df1c4   = df_centered_4(h,v);
 Ed1c4   = abs(truedf1-df1c4);
 
-save_to_file([x; truedf1; df1; df1c2; df1s2; df1c4;Ed1;Ed1c2;Ed1s2;Ed1c4],'df1.dat');
+save_to_file([x; truedf1; df1; df1c2; df1s2; df1c4],'df1.dat');
 plot_file('df1.dat');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
