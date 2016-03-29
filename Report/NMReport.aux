@@ -1,43 +1,72 @@
 \relax 
-\@writefile{toc}{\contentsline {chapter}{\numberline {1}Time Integration}{1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction and Preliminaries}{1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{adveq}{{1.1}{1}}
-\newlabel{waveeq}{{1.2}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.1}Characteristic Structure}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}Advection Equation}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Wave Equation}{2}}
-\newlabel{wavecoords}{{1.8}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}Spacing}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Discretization}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Advection Equation}{3}}
-\@writefile{toc}{\contentsline {subsubsection}{Centered Euler}{3}}
-\@writefile{toc}{\contentsline {subsubsection}{Leapfrog}{3}}
-\@writefile{toc}{\contentsline {subsubsection}{Upwind Euler}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Wave Equation}{3}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Graphs}{4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Finite Difference}{2}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Error Graphs}{4}}
-\newlabel{errorgraph}{{A.1}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Comparison of Errors in FDM variants in log plot}}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}PDE Characteristics}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.1}Advection Equation}{5}}
-\newlabel{advcoordimg}{{A.2.1}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.2}{\ignorespaces Advection characteristic with h < k}}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces Advection characteristic with h = k}}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.4}{\ignorespaces Advection characteristic with h > k}}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.2}Wave Equation}{7}}
-\newlabel{wavecoordimg}{{A.2.2}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.5}{\ignorespaces Wave Equation characteristic with h < k}}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.6}{\ignorespaces Wave Equation characteristic with h = k}}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.7}{\ignorespaces Wave Equation characteristic with h > k}}{8}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Utility Functions}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}First Derivatives}{2}}
+\newlabel{1ofdm}{{2.1}{2}}
+\newlabel{1ofdm2c}{{2.2}{2}}
+\newlabel{1ofdm2s}{{2.3}{2}}
+\newlabel{1ofdm4c}{{2.4}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Second Derivatives}{3}}
+\newlabel{2ofdm2c}{{2.5}{3}}
+\newlabel{2ofdm4c}{{2.6}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Ghost Points}{3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Time Integration}{4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {B.1}Save to File}{9}}
-\newlabel{stf}{{B.1}{9}}
-\@writefile{lol}{\contentsline {lstlisting}{Code/save\textunderscore to\textunderscore file.m}{9}}
-\@writefile{toc}{\contentsline {section}{\numberline {B.2}Plot File}{9}}
-\newlabel{plotfile}{{B.2}{9}}
-\@writefile{lol}{\contentsline {lstlisting}{Code/plot\textunderscore file.m}{9}}
+\newlabel{adveq}{{3.1}{4}}
+\newlabel{waveeq}{{3.2}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Characteristic Structure}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Advection Equation}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Wave Equation}{5}}
+\newlabel{wavecoords}{{3.8}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Spacing}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Discretization}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Advection Equation}{6}}
+\newlabel{advfdm}{{3.13}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{Leapfrog}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{Centered Euler}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{Upwind Euler}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Wave Equation}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Implimentation}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Centered Euler Advection Equation}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Leapfrog Advection Equation}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Leapfrog Wave Equation}{8}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Error Graphs}{10}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{errorgraph}{{A}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Comparison of Errors in FDM variants in log plot}}{10}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}PDE Characteristics}{11}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {B.1}Advection Equation}{11}}
+\newlabel{advcoordimg}{{B.1}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Advection characteristic with h < k}}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces Advection characteristic with h = k}}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.3}{\ignorespaces Advection characteristic with h > k}}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.2}Wave Equation}{13}}
+\newlabel{wavecoordimg}{{B.2}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.4}{\ignorespaces Wave Equation characteristic with h < k}}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.5}{\ignorespaces Wave Equation characteristic with h = k}}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.6}{\ignorespaces Wave Equation characteristic with h > k}}{14}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}PDE Implimentation}{15}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {C.1}Centered Euler Advection Equation}{15}}
+\newlabel{center_euler_adv}{{C.1}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.1}{\ignorespaces Change in L2-norm over time of Centered Euler Evolution}}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.2}{\ignorespaces Advection Equation and Approximations after 2 seconds}}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {C.2}Leapfrog Advection Equation}{16}}
+\newlabel{leapfrog_adv}{{C.2}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.3}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution}}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.4}{\ignorespaces Advection Equation and Approximations after 9 seconds}}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {C.3}Leapfrog Wave Equation}{17}}
+\newlabel{leapfrog_wave}{{C.3}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.5}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution with $k = h$}}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.6}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution with $k = 0.5h$}}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.7}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution with $k = 2h$}}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.8}{\ignorespaces Wave Equation and Approximations after 9 seconds}}{19}}
