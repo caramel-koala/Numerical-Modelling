@@ -10,7 +10,7 @@ h   = get_h(x);
 h2  = get_h(x2);
 k   = h;
 k2  = h2;
-tmax    = 2;
+tmax= 20;
 t   = (0:k:tmax);
 t2  = (0:k2:tmax);
 c   = 1;
@@ -27,10 +27,11 @@ uex =@(x,t) exp(-(x-t).^2);
 [v2, L22] = centered_euler(u02,uex,x2,t2,c,h2,k2);
 
 %plot graphs
-% plot(t,L2,'r',t2,L22,'b');
-% legend('N=100','N=1000');
-% xlabel('time');
-%ylabel('L2-norm of the Error');
+semilogy(t,L2,'r',t2,L22,'b');
+legend('N=100','N=1000');
+xlabel('time');
+ylabel('L2-norm of the Error');
+figure;
 plot(x,v,'r',x2,v2,'b',x2,uex(x2,tmax),'g');
 legend('N=100','N=1000','Exact');
 xlabel('x');

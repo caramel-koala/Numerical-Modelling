@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.3.11)  29 MAR 2016 23:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.3.11)  9 APR 2016 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -268,44 +268,67 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box30
 \@float@everytoks=\toks28
 \@floatcapt=\box31
-) (./NMReport.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+)
+\c@ContinuedFloat=\count110
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count111
+\c@subtable=\count112
+)
+(./NMReport.aux)
 \openout1 = `NMReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 26.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    ... okay on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
-\scratchdimen=\dimen118
+\scratchcounter=\count113
+\scratchdimen=\dimen125
 \scratchbox=\box32
-\nofMPsegments=\count111
-\nofMParguments=\count112
+\nofMPsegments=\count114
+\nofMParguments=\count115
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count113
-\MPscratchDim=\dimen119
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen126
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks30
 )
-\c@lstlisting=\count116
+\c@lstlisting=\count119
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -354,12 +377,14 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+LaTeX Font Info:    Try loading font information for U+msb on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -371,30 +396,35 @@ Chapter 1.
 
 ]
 Chapter 2.
+<Images/Error.jpg, id=15, 1927.2pt x 952.55875pt>
+File: Images/Error.jpg Graphic file (type jpg)
+ <use Images/Error.jpg>
+Package pdftex.def Info: Images/Error.jpg used on input line 5.
+(pdftex.def)             Requested size: 345.0pt x 170.52295pt.
 
-Underfull \hbox (badness 4699) in paragraph at lines 5--9
+Underfull \hbox (badness 4699) in paragraph at lines 11--15
 \OT1/cmr/m/n/10 nite points us-ing the sur-round-ing points such that $\OML/cmm
 /m/it/10 dv[] \OMS/cmsy/m/n/10 ^^Y []$\OT1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--9
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--30
-[]$\OT1/cmr/m/n/10 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--30
+Underfull \hbox (badness 10000) in paragraph at lines 11--15
 
  []
 
 [2
 
-]) (./3TI.tex [3]
+ <./Images/Error.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 32--36
+[]$\OT1/cmr/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--36
+
+ []
+
+) (./3TI.tex [3] [4]
 Chapter 3.
 
 ! Package amsmath Error: Erroneous nesting of equation structures;
@@ -427,7 +457,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--24
 
  []
 
-[4
+[5
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 34--38
@@ -439,230 +469,215 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--38
 
  []
 
-[5]
-
-! Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.82 \end{align}
-                
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.95 \end{align}
-                
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.109 \end{align}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[6]
-
-! Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.119 \end{align}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 \end{align}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.136 \end{align}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[7]) [8] (./Appendix.tex [9]
-Appendix A.
-<Images/Error.jpg, id=48, 1927.2pt x 952.55875pt>
-File: Images/Error.jpg Graphic file (type jpg)
- <use Images/Error.jpg>
-Package pdftex.def Info: Images/Error.jpg used on input line 3.
-(pdftex.def)             Requested size: 345.0pt x 170.52295pt.
-
-[10
-
- <./Images/Error.jpg>]
-Appendix B.
-<Images/advection_h<k.jpg, id=52, 570.13pt x 422.57875pt>
+<Images/advection_h<k.jpg, id=35, 570.13pt x 422.57875pt>
 File: Images/advection_h<k.jpg Graphic file (type jpg)
 
 <use Images/advection_h<k.jpg>
-Package pdftex.def Info: Images/advection_h<k.jpg used on input line 10.
-(pdftex.def)             Requested size: 285.0643pt x 211.28885pt.
+Package pdftex.def Info: Images/advection_h<k.jpg used on input line 72.
+(pdftex.def)             Requested size: 103.50105pt x 76.71214pt.
 
-<Images/advection_h=k.jpg, id=53, 578.16pt x 366.36874pt>
+<Images/advection_h=k.jpg, id=36, 578.16pt x 366.36874pt>
 File: Images/advection_h=k.jpg Graphic file (type jpg)
 
 <use Images/advection_h=k.jpg>
-Package pdftex.def Info: Images/advection_h=k.jpg used on input line 14.
-(pdftex.def)             Requested size: 289.07928pt x 183.18391pt.
+Package pdftex.def Info: Images/advection_h=k.jpg used on input line 78.
+(pdftex.def)             Requested size: 103.50105pt x 65.58574pt.
 
-<Images/advection_h>k.jpg, id=54, 570.13pt x 422.57875pt>
+<Images/advection_h>k.jpg, id=37, 570.13pt x 422.57875pt>
 File: Images/advection_h>k.jpg Graphic file (type jpg)
 
 <use Images/advection_h>k.jpg>
-Package pdftex.def Info: Images/advection_h>k.jpg used on input line 18.
-(pdftex.def)             Requested size: 285.0643pt x 211.28885pt.
- [11
-
- <./Images/advection_h<k.jpg>]
-<Images/wave_h<k.jpg, id=58, 570.13pt x 422.57875pt>
+Package pdftex.def Info: Images/advection_h>k.jpg used on input line 84.
+(pdftex.def)             Requested size: 103.50105pt x 76.71214pt.
+ [6]
+<Images/wave_h<k.jpg, id=42, 570.13pt x 422.57875pt>
 File: Images/wave_h<k.jpg Graphic file (type jpg)
  <use Images/wave_h<k.jpg>
-Package pdftex.def Info: Images/wave_h<k.jpg used on input line 24.
-(pdftex.def)             Requested size: 285.0643pt x 211.28885pt.
+Package pdftex.def Info: Images/wave_h<k.jpg used on input line 96.
+(pdftex.def)             Requested size: 103.50105pt x 76.71214pt.
 
-<Images/wave_h=k.jpg, id=59, 578.16pt x 373.395pt>
+<Images/wave_h=k.jpg, id=43, 578.16pt x 373.395pt>
 File: Images/wave_h=k.jpg Graphic file (type jpg)
  <use Images/wave_h=k.jpg>
-Package pdftex.def Info: Images/wave_h=k.jpg used on input line 28.
-(pdftex.def)             Requested size: 289.07928pt x 186.69704pt.
+Package pdftex.def Info: Images/wave_h=k.jpg used on input line 102.
+(pdftex.def)             Requested size: 103.50105pt x 66.84355pt.
 
-[12 <./Images/advection_h=k.jpg> <./Images/advection_h>k.jpg>]
-<Images/wave_h>k.jpg, id=64, 578.16pt x 383.4325pt>
+<Images/wave_h>k.jpg, id=44, 578.16pt x 383.4325pt>
 File: Images/wave_h>k.jpg Graphic file (type jpg)
  <use Images/wave_h>k.jpg>
-Package pdftex.def Info: Images/wave_h>k.jpg used on input line 32.
-(pdftex.def)             Requested size: 289.07928pt x 191.71577pt.
+Package pdftex.def Info: Images/wave_h>k.jpg used on input line 108.
+(pdftex.def)             Requested size: 103.50105pt x 68.64043pt.
 
-[13 <./Images/wave_h<k.jpg> <./Images/wave_h=k.jpg>] [14 <./Images/wave_h>k.jpg
->]
-Appendix C.
-<Images/center_euler_adv_l2.jpg, id=71, 562.1pt x 421.575pt>
-File: Images/center_euler_adv_l2.jpg Graphic file (type jpg)
 
-<use Images/center_euler_adv_l2.jpg>
-Package pdftex.def Info: Images/center_euler_adv_l2.jpg used on input line 39.
-(pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
 
-<Images/center_euler_adv.jpg, id=72, 570.13pt x 422.57875pt>
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 \end{align}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[7 <./Images/advection_h<k.jpg> <./Images/advection_h=k.jpg> <./Images/advectio
+n_h>k.jpg> <./Images/wave_h<k.jpg> <./Images/wave_h=k.jpg> <./Images/wave_h>k.j
+pg>]
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.142 \end{align}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 \end{align}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.166 \end{align}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 \end{align}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[8]
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183 \end{align}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<Images/center_euler_adv.jpg, id=54, 562.1pt x 421.575pt>
 File: Images/center_euler_adv.jpg Graphic file (type jpg)
 
 <use Images/center_euler_adv.jpg>
-Package pdftex.def Info: Images/center_euler_adv.jpg used on input line 43.
-(pdftex.def)             Requested size: 285.0643pt x 211.28885pt.
- [15
+Package pdftex.def Info: Images/center_euler_adv.jpg used on input line 210.
+(pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
 
- <./Images/center_euler_adv_l2.jpg>]
-<Images/leapfrog_adv_l2.jpg, id=76, 562.1pt x 421.575pt>
+<Images/center_euler_adv_l2.jpg, id=55, 562.1pt x 421.575pt>
+File: Images/center_euler_adv_l2.jpg Graphic file (type jpg)
+
+<use Images/center_euler_adv_l2.jpg>
+Package pdftex.def Info: Images/center_euler_adv_l2.jpg used on input line 215.
+
+(pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
+ [9]
+<Images/leapfrog_adv_l2.jpg, id=59, 562.1pt x 421.575pt>
 File: Images/leapfrog_adv_l2.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_adv_l2.jpg>
-Package pdftex.def Info: Images/leapfrog_adv_l2.jpg used on input line 48.
+Package pdftex.def Info: Images/leapfrog_adv_l2.jpg used on input line 224.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
-
-<Images/leapfrog_adv.jpg, id=77, 570.13pt x 422.57875pt>
+ [10 <./Images/center_euler_adv.jpg> <./Images/center_euler_adv_l2.jpg>]
+<Images/leapfrog_adv.jpg, id=63, 562.1pt x 421.575pt>
 File: Images/leapfrog_adv.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_adv.jpg>
-Package pdftex.def Info: Images/leapfrog_adv.jpg used on input line 52.
-(pdftex.def)             Requested size: 285.0643pt x 211.28885pt.
- [16 <./Images/center_euler_adv.jpg> <./Images/leapfrog_adv_l2.jpg>] <Images/le
-apfrog_wave_l2.jpg, id=81, 562.1pt x 421.575pt>
+Package pdftex.def Info: Images/leapfrog_adv.jpg used on input line 229.
+(pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
+ [11 <./Images/leapfrog_adv_l2.jpg> <./Images/leapfrog_adv.jpg>] <Images/leapfr
+og_wave_l2.jpg, id=67, 562.1pt x 421.575pt>
 File: Images/leapfrog_wave_l2.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_wave_l2.jpg>
-Package pdftex.def Info: Images/leapfrog_wave_l2.jpg used on input line 57.
+Package pdftex.def Info: Images/leapfrog_wave_l2.jpg used on input line 242.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
 
-<Images/leapfrog_wave_l2_halfk.jpg, id=82, 562.1pt x 421.575pt>
+<Images/leapfrog_wave_l2_halfk.jpg, id=68, 562.1pt x 421.575pt>
 File: Images/leapfrog_wave_l2_halfk.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_wave_l2_halfk.jpg>
-Package pdftex.def Info: Images/leapfrog_wave_l2_halfk.jpg used on input line 6
-1.
+Package pdftex.def Info: Images/leapfrog_wave_l2_halfk.jpg used on input line 2
+47.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
 
-<Images/leapfrog_wave_l2_2k.jpg, id=83, 562.1pt x 421.575pt>
+<Images/leapfrog_wave_l2_2k.jpg, id=69, 562.1pt x 421.575pt>
 File: Images/leapfrog_wave_l2_2k.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_wave_l2_2k.jpg>
-Package pdftex.def Info: Images/leapfrog_wave_l2_2k.jpg used on input line 65.
+Package pdftex.def Info: Images/leapfrog_wave_l2_2k.jpg used on input line 252.
+
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
- [17 <./Images/leapfrog_adv.jpg> <./Images/leapfrog_wave_l2.jpg>] <Images/leapf
-rog_wave.jpg, id=87, 562.1pt x 421.575pt>
+ [12 <./Images/leapfrog_wave_l2.jpg>]
+<Images/leapfrog_wave.jpg, id=74, 562.1pt x 421.575pt>
 File: Images/leapfrog_wave.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_wave.jpg>
-Package pdftex.def Info: Images/leapfrog_wave.jpg used on input line 69.
+Package pdftex.def Info: Images/leapfrog_wave.jpg used on input line 257.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
-) [18 <./Images/leapfrog_wave_l2_halfk.jpg> <./Images/leapfrog_wave_l2_2k.jpg>]
- [19 <./Images/leapfrog_wave.jpg>]
+) [13 <./Images/leapfrog_wave_l2_halfk.jpg> <./Images/leapfrog_wave_l2_2k.jpg>]
+ [14 <./Images/leapfrog_wave.jpg>]
 (./NMReport.aux) ) 
 Here is how much of TeX's memory you used:
- 4571 strings out of 495000
- 63536 string characters out of 6181169
- 128936 words of memory out of 5000000
- 7714 multiletter control sequences out of 15000+600000
- 12717 words of font info for 49 fonts, out of 8000000 for 9000
+ 5672 strings out of 495000
+ 83415 string characters out of 6181169
+ 149454 words of memory out of 5000000
+ 8806 multiletter control sequences out of 15000+600000
+ 14262 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,8n,42p,934b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,42p,942b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-bm10.pfb>
-Output written on NMReport.pdf (20 pages, 499837 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on NMReport.pdf (15 pages, 509659 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
