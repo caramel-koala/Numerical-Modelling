@@ -23,7 +23,7 @@ u02 = exp(-x2.^2);
 %exact solution
 uex =@(x,t) 1/2*(exp(-(x-t).^2) + exp(-(x+t).^2));
 
-%use cetered euler to evolve 100 itterations
+%use leapfrog to evolve to t=tmax
 [v, L2]   = leapfrog_wave(u0,uex(x,k),uex,x,t,c,h,k);
 [v2, L22] = leapfrog_wave(u02,uex(x2,k2),uex,x2,t2,c,h2,k2);
 
