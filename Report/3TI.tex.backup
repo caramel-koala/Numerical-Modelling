@@ -1,11 +1,11 @@
 \chapter{Time Integration}
 In this chapter, the evolution of an equation will be analyzed by looking at the time evolutions of two Partial Differential Equations (PDEs), namely the Advection Equation (Equation \ref{adveq}) and the Wave Equation (Equation \ref{waveeq}).
 \begin{gather} \label{adveq}
-  u_t + cu_x = 0, \qquad c \in \mathbb{R} \\ \nonumber
+  u_t + cu_x = 0, \qquad c \in \mathbb{R} \\ 
   u(x,0) = u_0(x)
 \end{gather}
 \begin{gather} \label{waveeq}
-  u_{tt} - c^2u_{xx} = 0, \qquad c \in \mathbb{R} \\ \nonumber
+  u_{tt} - c^2u_{xx} = 0, \qquad c \in \mathbb{R} \\ 
   u(x,0) = u_0(x), \qquad u_t(x,0) = p_0(x)
 \end{gather}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

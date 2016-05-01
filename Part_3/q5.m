@@ -20,7 +20,7 @@ u0  = exp(-x.^2);
 u02 = exp(-x2.^2);
 
 %exact solution
-uex =@(x,t) exp(-(x-t).^2);
+uex =@(x,t) exp(-(x-t).^2) + exp(-((x-10)-t).^2);
 
 %use cetered euler to evolve 100 itterations
 [v, L2]   = centered_euler(u0,uex,x,t,c,h,k);

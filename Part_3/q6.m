@@ -15,16 +15,19 @@ t   = (0:k:tmax);
 t2  = (0:k2:tmax);
 c   = 1;
 
+%Periodic factor
+P   =@(x) mod((x + 10), 20)-10;
+
 %set initial data
 u0  = exp(-x.^2);
 u02 = exp(-x2.^2);
 
 %exact solution
-uex =@(x,t) exp(-(x-t).^2);
+uexp =@(x,t) exp(-(x-t).^2) + exp(-(x-P(t)).^2);
 
 %use cetered euler to evolve 100 itterations
-[v, L2]   = leapfrog_adv(u0,uex(x,k),uex,x,t,c,h,k);
-[v2, L22] = leapfrog_adv(u02,uex(x2,k2),uex,x2,t2,c,h2,k2);
+[v, L2]   = leapfrog_adv(u0,uex(x,k),uexp,x,t,c,h,k);
+[v2, L22] = leapfrog_adv(u02,uex(x2,k2),uexp,x2,t2,c,h2,k2);
 
 %plot graphs
 semilogy(t,L2,'r',t2,L22,'b');
@@ -32,7 +35,7 @@ legend('N=100','N=1000');
 xlabel('time');
 ylabel('L2-norm of the Error');
 figure;
-plot(x,v,'r',x2,v2,'b',x2,uex(x2,tmax),'g');
+plot(x,v,'r',x2,v2,'b',x2,uexp(x2,tmax),'g');
 legend('N=100','N=1000','Exact');
 xlabel('x');
 ylabel('u(x,9)');
