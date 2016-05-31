@@ -25,5 +25,6 @@
 \contentsline {subsection}{\numberline {4.3.1}Centered Euler}{21}
 \contentsline {subsection}{\numberline {4.3.2}Upwind Euler}{22}
 \contentsline {subsection}{\numberline {4.3.3}Leapfrog Advection Equation}{23}
-\contentsline {subsection}{\numberline {4.3.4} Diffusion Equation}{25}
+\contentsline {subsection}{\numberline {4.3.4} Diffusion Equation}{24}
 \contentsline {chapter}{\numberline {5}Time Evolutions}{26}
+\contentsline {section}{\numberline {5.1}Lax-Fredrichs}{26}
