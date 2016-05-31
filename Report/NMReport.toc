@@ -3,29 +3,29 @@
 \contentsline {section}{\numberline {2.1}First Derivatives}{4}
 \contentsline {section}{\numberline {2.2}Second Derivatives}{5}
 \contentsline {section}{\numberline {2.3}Ghost Points}{5}
-\contentsline {chapter}{\numberline {3}Time Integration}{7}
-\contentsline {section}{\numberline {3.1}Characteristic Structure}{7}
-\contentsline {subsection}{\numberline {3.1.1}Advection Equation}{7}
-\contentsline {subsection}{\numberline {3.1.2}Wave Equation}{8}
-\contentsline {subsection}{\numberline {3.1.3}Spacing}{8}
-\contentsline {section}{\numberline {3.2}Discretization}{9}
-\contentsline {subsection}{\numberline {3.2.1}Advection Equation}{9}
-\contentsline {subsubsection}{Leapfrog}{10}
-\contentsline {subsubsection}{Centered Euler}{10}
-\contentsline {subsubsection}{Upwind Euler}{10}
-\contentsline {subsection}{\numberline {3.2.2}Wave Equation}{11}
-\contentsline {section}{\numberline {3.3}Implimentation}{11}
-\contentsline {subsection}{\numberline {3.3.1}Centered Euler Advection Equation}{11}
-\contentsline {subsection}{\numberline {3.3.2}Leapfrog Advection Equation}{13}
-\contentsline {subsection}{\numberline {3.3.3}Leapfrog Wave Equation}{15}
-\contentsline {chapter}{\numberline {4}Von Neumann Analysis}{19}
-\contentsline {section}{\numberline {4.1}Fourier Transforms}{19}
-\contentsline {section}{\numberline {4.2}The Amplification Factor}{20}
-\contentsline {section}{\numberline {4.3}Examples}{21}
-\contentsline {subsection}{\numberline {4.3.1}Centered Euler}{21}
-\contentsline {subsection}{\numberline {4.3.2}Upwind Euler}{22}
-\contentsline {subsection}{\numberline {4.3.3}Leapfrog Advection Equation}{23}
-\contentsline {subsection}{\numberline {4.3.4} Diffusion Equation}{24}
-\contentsline {chapter}{\numberline {5}Time Evolutions}{26}
-\contentsline {section}{\numberline {5.1}Lax-Fredrichs}{26}
-\contentsline {section}{\numberline {5.2}Lax-Wendroff}{27}
+\contentsline {chapter}{\numberline {3}Time Integration}{6}
+\contentsline {section}{\numberline {3.1}Characteristic Structure}{6}
+\contentsline {subsection}{\numberline {3.1.1}Advection Equation}{6}
+\contentsline {subsection}{\numberline {3.1.2}Wave Equation}{7}
+\contentsline {subsection}{\numberline {3.1.3}Spacing}{7}
+\contentsline {section}{\numberline {3.2}Discretization}{8}
+\contentsline {subsection}{\numberline {3.2.1}Advection Equation}{8}
+\contentsline {subsubsection}{Leapfrog}{8}
+\contentsline {subsubsection}{Centered Euler}{9}
+\contentsline {subsubsection}{Upwind Euler}{9}
+\contentsline {subsection}{\numberline {3.2.2}Wave Equation}{9}
+\contentsline {section}{\numberline {3.3}Implimentation}{10}
+\contentsline {subsection}{\numberline {3.3.1}Centered Euler Advection Equation}{10}
+\contentsline {subsection}{\numberline {3.3.2}Leapfrog Advection Equation}{11}
+\contentsline {subsection}{\numberline {3.3.3}Leapfrog Wave Equation}{12}
+\contentsline {chapter}{\numberline {4}Von Neumann Analysis}{16}
+\contentsline {section}{\numberline {4.1}Fourier Transforms}{16}
+\contentsline {section}{\numberline {4.2}The Amplification Factor}{17}
+\contentsline {section}{\numberline {4.3}Examples}{18}
+\contentsline {subsection}{\numberline {4.3.1}Centered Euler}{18}
+\contentsline {subsection}{\numberline {4.3.2}Upwind Euler}{18}
+\contentsline {subsection}{\numberline {4.3.3}Leapfrog Advection Equation}{19}
+\contentsline {subsection}{\numberline {4.3.4} Diffusion Equation}{20}
+\contentsline {chapter}{\numberline {5}Time Evolutions}{22}
+\contentsline {section}{\numberline {5.1}Lax-Fredrichs}{22}
+\contentsline {section}{\numberline {5.2}Lax-Wendroff}{22}

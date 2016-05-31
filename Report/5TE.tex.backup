@@ -49,14 +49,45 @@ For the advection equation specifically, we can derive the LW scheme with $F$ se
 as the half steps. Therefore the full scheme is
 \begin{equation*}
 \begin{align}
-  v^{n+1}_j \simeq v^n_j-\frac{ck}{h}(\frac{1}{2}(v^n_j + v^n_{j-1}) - \frac{ck}{2h}(v^n_j-v^n_{j-1})- \frac{1}{2}(v^n_{j+1} + v^n_j) - \frac{ck}{2h}(v^n_{j+1}-v^n_j))\\  
+  v^{n+1}_j &\simeq v^n_j-\frac{ck}{h}\big(\frac{1}{2}(v^n_j + v^n_{j-1}) - \frac{ck}{2h}(v^n_j-v^n_{j-1})- \frac{1}{2}(v^n_{j+1} + v^n_j) - \frac{ck}{2h}(v^n_{j+1}-v^n_j)\big)\\  
+  v^{n+1}_j &\simeq v^n_j-\frac{ck}{2h}(v^n_{j+1} - v^n_{j-1}) + \frac{c^2k^2}{2h^2}(v^n_{j+1} -2v^n_j + v^n_{j-1})
 \end{align}
 \end{equation*}
-
-
-
-
-
-
-
-
+We can see that this is similar to LF scheme for the advection equation, but with $\epsilon=c^2k^2/2$ as part of the dissipative term. Unlike the LF scheme however, the dissipative term is not dependent on $h$ which would result in a fixed $\zeta$, but rather, due to this, it may be subject to amplitude dissipation. We can check this by using Von Neumann analysis on the scheme.
+\\
+\\
+Start by setting
+\begin{equation*}
+  v^n_j = \hat{v}^n(\omega)e^{i\omega hj}
+\end{equation*}
+substituting this into the LW scheme advection equation, we get
+\begin{equation*}
+\begin{align}
+  \hat{v}^{n+1}e^{i\omega hj} &= \hat{v}^ne^{i\omega hj}-\frac{ck}{2h}(\hat{v}^ne^{i\omega h(j+1)} - \hat{v}^ne^{i\omega h(j-1)}) + \frac{c^2k^2}{2h^2}(\hat{v}^ne^{i\omega h(j+1)} -2\hat{v}^ne^{i\omega hj} + \hat{v}^ne^{i\omega h(j-1)}) \\
+  \hat{Q}\hat{v}^ne^{i\omega hj} &= \hat{v}^ne^{i\omega hj} \big(1 - \frac{ck}{2h}(e^{i\omega h}+e^{-i\omega h}) + \frac{c^2k^2}{2h^2}(e^{i\omega h} -2+ e^{-i\omega h})\big)\\
+  \hat{Q} &= 1 - \frac{ck}{2h}(e^{i\omega h}-e^{-i\omega h}) + \frac{c^2k^2}{2h^2}(e^{i\omega h} -2+ e^{-i\omega h})\\
+  \hat{Q} &= 1 - i\frac{ck}{h}\sin\omega h - \frac{c^2k^2}{h^2}(1 - \cos\omega h)\\
+\end{align}
+\end{equation*}
+Setting $\frac{ck}{h}=\alpha$ and solving for $||\hat{Q}||^2$, we get
+\begin{equation*}
+\begin{align}
+  ||\hat{Q}||^2 &= (1 - \alpha^2(1 - \cos\omega h))^2 + (\alpha\sin\omega h)^2\\
+  ||\hat{Q}||^2 &= 1 - 2\alpha^2(1 - \cos\omega h) + \alpha^4(1 - \cos\omega h)^2 + \alpha^2\sin^2\omega h\\
+  ||\hat{Q}||^2 &= 1 + \alpha^2 \big( 2(1 - \cos\omega h) + \alpha^2(1 - \cos\omega h)^2 + \sin^2\omega h \big)\\
+  ||\hat{Q}||^2 &= 1 + \alpha^2 ( 2 - 2\cos\omega h + \alpha^2(1 - \cos\omega h)^2 + 1 -\cos^2\omega h )\\
+  ||\hat{Q}||^2 &= 1 + \alpha^2 \big( \alpha^2(1 - \cos\omega h)^2 - (\cos^2\omega h - 2\cos\omega h + 1) \big)\\
+  ||\hat{Q}||^2 &= 1 - \alpha^2 (1 - \alpha^2)(1 - \cos\omega h)^2\\
+\end{align}
+\end{equation*}
+Therefore
+\begin{equation*}
+\begin{align}
+  ||\hat{Q}||^2 &\leq 1 \text{ so long as}\\
+  1- \alpha^2 	&\leq 0 \\
+  1	 	&\leq \alpha \\
+  1		&\leq \frac{ck}{h} \\
+  c		&\leq \frac{h}{k}
+\end{align}
+\end{equation*}
+Which means that it is stable so long as Courant's stability condition is met.
