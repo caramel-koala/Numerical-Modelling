@@ -28,3 +28,4 @@
 \contentsline {subsection}{\numberline {4.3.4} Diffusion Equation}{24}
 \contentsline {chapter}{\numberline {5}Time Evolutions}{26}
 \contentsline {section}{\numberline {5.1}Lax-Fredrichs}{26}
+\contentsline {section}{\numberline {5.2}Lax-Wendroff}{27}
