@@ -22,7 +22,7 @@ u02 = exp(-x2.^2);
 %exact solution
 uex =@(x,t) exp(-(x-t).^2);% + exp(-((x+20)-t).^2);
 
-%use cetered euler to evolve 100 itterations
+%use lax-wnedroff to evolve 100 itterations
 [v, L2]   = lax_wen_adv(u0,uex,x,t,c,h,k);
 [v2, L22] = lax_wen_adv(u02,uex,x2,t2,c,h2,k2);
 
