@@ -203,11 +203,13 @@ u(x,t) = e^{-(x-t)^2}
 The wild variance of the Centered Euler method can be seen after only two seconds in Figure \ref{center_euler_adv}. The L2-norm of the error exponentially increases over time as seen in Figure \ref{center_euler_adv_l2}. The method generates high frequency noise which is amplified over time and the previous step's noise feeds into the next step to be increased again. This is due to $k=h$ and how this step ratio sits exactly on the bounds what can be seen as a stable causal step. If $k<h$ the stability of the metod would increase greatly.
 %-------------------------------------------------------------------------------
 \begin{figure}[H] 
+ \centering
  \includegraphics[scale=0.5]{Images/center_euler_adv.jpg}
  \caption{Advection Equation and Approximations after 2 seconds}
  \label{center_euler_adv}
 \end{figure}
 \begin{figure}[H] 
+ \centering
  \includegraphics[scale=0.5]{Images/center_euler_adv_l2.jpg}
  \caption{Change in L2-norm over time of Centered Euler Evolution}
  \label{center_euler_adv_l2}
@@ -217,11 +219,13 @@ The wild variance of the Centered Euler method can be seen after only two second
 The L2-norm of the error as seen in Figure \ref{leapfrog_adv_l2} is due to the ghost points of the approximation being treated as a periodic extension of the function causing the function to be repeated every 20 time steps, the start of this can be seen in Figure \ref{leapfrog_adv}, which shows the functions after nine time steps. The error seems, in the early steps, to be much smaller than expected, $~10^{-15}$ instead of $~10^{-4}$ and $~10^{-8}$ for $N=100$ and $N=1000$ respectively. This is due to the ratio between the time, and spacial spacing being $k=h$, and that this perfectly projects the previous steps information to the next leading to a more precise approximation.
 %-------------------------------------------------------------------------------
 \begin{figure}[H] 
+ \centering
  \includegraphics[scale=0.5]{Images/leapfrog_adv_l2.jpg}
  \caption{Change in L2-norm over time of Leapfrog Evolution}
  \label{leapfrog_adv_l2}
 \end{figure}
 \begin{figure}[H]
+ \centering
  \includegraphics[scale=0.5]{Images/leapfrog_adv.jpg}
  \caption{Advection Equation and Approximations after 9 seconds}
  \label{leapfrog_adv}
@@ -235,21 +239,25 @@ u(x,t) = \frac{1}{2}(e^{-(x-t)^2} + e^{-(x+t)^2})
 Figure \ref{leapfrog_wave} shows how this approximation suffers from the same problem as the leapfrog advection approximation since it too has ghost points which see the function as a periodic extension and leads to the same problem of steps in the L2-norm of the error, shown in Figure \ref{leapfrog_wave_l2}. Adjusting the size of the time steps by making $k=0.5h$ should leads to a minor reduction in the L2-norm of the error, however this is not the case as with $h=k$, the Leapfrog Wave Approximation has the same effect as that of the Leapfrog Advection Approximation where data is perefectly projected from one time step to the next leading it to be more accurate than that of a smaller time step as seen in Figure \ref{leapfrog_wave_l2_halfk}. With the large steps due to the periodic extension this is almost unnoticeable, if the time step is doubled to $k=2h$ then the error increases exponentially over time after a relatively short period of time, seen in Figure \ref{leapfrog_wave_l2_2k}.
 %-------------------------------------------------------------------------------
 \begin{figure}[H] 
+ \centering
  \includegraphics[scale=0.5]{Images/leapfrog_wave_l2.jpg}
  \caption{Change in L2-norm over time of Leapfrog Evolution with $k = h$}
  \label{leapfrog_wave_l2}
 \end{figure}
 \begin{figure}[H] 
+ \centering
  \includegraphics[scale=0.5]{Images/leapfrog_wave_l2_halfk.jpg}
  \caption{Change in L2-norm over time of Leapfrog Evolution with $k = 0.5h$}
  \label{leapfrog_wave_l2_halfk}
 \end{figure}
 \begin{figure}[H] 
+ \centering
  \includegraphics[scale=0.5]{Images/leapfrog_wave_l2_2k.jpg}
  \caption{Change in L2-norm over time of Leapfrog Evolution with $k = 2h$}
  \label{leapfrog_wave_l2_2k}
 \end{figure}
 \begin{figure}[H] 
+ \centering
  \includegraphics[scale=0.5]{Images/leapfrog_wave.jpg}
  \caption{Wave Equation and Approximations after 9 seconds}
  \label{leapfrog_wave}
@@ -258,6 +266,7 @@ Figure \ref{leapfrog_wave} shows how this approximation suffers from the same pr
 By varying the spacial spacing size by setting $N=2^i$ where $i=6,\dots,12$ and fixing $k=0.001$ we can deterimine the relationship between the spacing and the L2-norm of the error, looking at this relationship at $t=5$ we get Figure \ref{leapfrog_wave_Nh}. As seen here, the logarithmic scaling of both axis produces a line graph with a slope of $-2$. This is due to the fact that the error of the leapfrog is proportional to $h^2$, which, when logarithmicly scaled, goes as $2log(h)$, to produce the straight line.
 %-------------------------------------------------------------------------------
 \begin{figure}[H] 
+ \centering
  \includegraphics[scale=0.5]{Images/leapfrog_wave_Nh.jpg}
  \caption{Change in the L2-norm of the error as the spacing varies}
  \label{leapfrog_wave_Nh}
