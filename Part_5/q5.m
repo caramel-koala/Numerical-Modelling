@@ -6,7 +6,7 @@
 %value: u(x,0) = {0, x<=0; 1, x>0}
 %on the interval -10:10
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-N   = 100;
+N   = 400;
 x   = linspace(-10,10,N+1);
 h   = get_h(x);
 k   = h;
@@ -31,10 +31,7 @@ u1  = uex(x,k);
 [vue, L2ue]     = up_euler_adv(u0,uex,x,t,c,h,k);
 
 %plot graphs
-semilogy(t,L2lw,'r');
+semilogy(t,L2lw,'r',t,L2cl,'b',t,L2ue,'g');
 xlabel('time');
-ylabel('L2-norm of the Error');
-figure;
-plot(x,vlw,'r',x,uex(x,tmax),'g');
-xlabel('x');
-ylabel('u(x,4)');
+ylabel('L2-norm of the Error for N=100');
+legend('Lax-Wendroff','Centered Leapfrog','Upwind Euler');
