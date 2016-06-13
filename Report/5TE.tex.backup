@@ -1,4 +1,4 @@
-\chapter{Time Evolutions}
+-\chapter{Time Evolutions}
 In this chapter we will be looking a the conservative form of an equation. An equation is said to be in it's conservative form if it can be written as:
 \begin{equation*}
   u_t + F(x,u)_x = 0
@@ -91,3 +91,25 @@ Therefore
 \end{align}
 \end{equation*}
 Which means that it is stable so long as Courant's stability condition is met.
+\\
+\\
+Implementing this scheme with the advection equation of a Gaussian pulse with $c=1$ and $k=h$ and evolving the system over 4 units of time. Figure \ref{laxwen_adv} shows that the pulse is almost perfectly propagated by this method. The L2-norm of the error can be seen in Figure \ref{laxwen_adv_l2}
+%------------------------------------------------------------------------------------------------------------------------------------------
+\begin{figure}[H]
+ \centering
+ \includegraphics[scale=0.5]{Images/lw_adv_4.jpg}
+ \caption{Lax-Wendroff Approximation after 4 seconds}
+ \label{laxwen_adv}
+\end{figure}
+%------------------------------------------------------------------------------------------------------------------------------------------
+\begin{figure}[H]
+ \centering
+ \includegraphics[scale=0.5]{Images/lw_adv_4_l2.jpg}
+ \caption{L2 norm of the Error of Lax-Wendroff Approximation over 4 seconds}
+ \label{laxwen_adv_l2}
+\end{figure}
+%------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+

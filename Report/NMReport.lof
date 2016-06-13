@@ -15,3 +15,5 @@
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Change in the L2-norm of the error as the spacing varies\relax }}{15}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Lax-Wendroff Approximation after 4 seconds\relax }}{24}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces L2 norm of the Error of Lax-Wendroff Approximation over 4 seconds\relax }}{25}
