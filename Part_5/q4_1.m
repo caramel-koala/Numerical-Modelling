@@ -1,12 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Part 5 Question 4
+%Part 5 Question 4 Part 1
 %Comparing the Upwind Euler, Centered
 %Leapfrog and Lax-Wendroff evloution of
 %the advection equation with initial
 %value: u(x,0) = {0, x<=0; 1, x>0}
 %on the interval -10:10
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-N   = 400;
+N   = 100;
 x   = linspace(-10,10,N+1);
 h   = get_h(x);
 k   = h;
@@ -31,7 +31,7 @@ u1  = uex(x,k);
 [vue, L2ue]     = up_euler_adv(u0,uex,x,t,c,h,k);
 
 %plot graphs
-semilogy(t,L2lw,'r',t,L2cl,'b',t,L2ue,'g');
-xlabel('time');
-ylabel('L2-norm of the Error for N=100');
-legend('Lax-Wendroff','Centered Leapfrog','Upwind Euler');
+plot(x,vlw,'r',x,vcl,'b',x,vue,'g',x,uex(x,tmax),'k');
+legend('Lax-Wendroff','Centered Leapfrog','Upwind Euler', 'Exact');
+xlabel('x');
+ylabel('u(x,4)');

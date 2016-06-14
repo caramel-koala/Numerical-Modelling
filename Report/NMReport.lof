@@ -17,3 +17,4 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Lax-Wendroff Approximation after 4 seconds\relax }}{24}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces L2 norm of the Error of Lax-Wendroff Approximation over 4 seconds\relax }}{25}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparison of Lax-Wendroff, Upwind Euler and Centered Leapfrog Methods\relax }}{25}
