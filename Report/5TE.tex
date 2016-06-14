@@ -109,27 +109,34 @@ Implementing this scheme with the advection equation of a Gaussian pulse with $c
  \label{laxwen_adv_l2}
 \end{figure}
 %------------------------------------------------------------------------------------------------------------------------------------------
-Comparing the Lax-Wendroff to the centered leapfrog and upwind Euler, we find that it is more stable than both these methods as shown by Figure \ref{fig:stepcompare}. We can see that comparing the evolution of the advection equation with a \texttt{hardlim} as the initial equation. We can see the accuracy of the Lax-Wendroff in this manner as at some points in time its L2-norm of the error is zero due to its perfect projection of the equation.
+Comparing the Lax-Wendroff to the centered leapfrog and upwind Euler, we find that it, much like the Upwind Euler, perfectly projects the initial information whereas the leapfrog generates an error due to the decoupled projection of information as shown by Figure \ref{fig:stepcompare} and with the different step sizes analyzed in Figure \ref{fig:ncompare}.
+%------------------------------------------------------------------------------------------------------------------------------------------
+\begin{figure}[H]
+ \centering
+ \includegraphics[scale=0.5]{Images/5_lw_cl_ue.jpg}
+ \caption{Comparing Lax-Wendroff, Centered Leapfrog and Upwind Euler.}
+  \label{fig:stepcompare}
+\end{figure}
 %------------------------------------------------------------------------------------------------------------------------------------------
 \begin{figure}[H]
 \centering
 \begin{subfigure}[b]{0.3\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{Images/adv_step_100.jpg}
-  \caption{$N=100$}
+  \includegraphics[width=\textwidth]{Images/5_lw_compare.jpg}
+  \caption{Lax-Wendroff}
 \end{subfigure}
 \hfill
 \begin{subfigure}[b]{0.3\textwidth}
-  \includegraphics[width=\textwidth]{Images/adv_step_200.jpg}
-  \caption{$N=200$}
+  \includegraphics[width=\textwidth]{Images/5_cl_compare.jpg}
+  \caption{Centered Leapfrog}
 \end{subfigure}
 \hfill
 \begin{subfigure}[b]{0.3\textwidth}
-  \includegraphics[width=\textwidth]{Images/adv_step_400.jpg}
-  \caption{$N=400$}
+  \includegraphics[width=\textwidth]{Images/5_ue_compare.jpg}
+  \caption{Upwind Euler}
 \end{subfigure}
-\caption{Comparison of Lax-Wendroff, Upwind Euler and Centered Leapfrog Methods}
-\label{fig:stepcompare}
+\caption{Comparison of methods at different step sizes.}
+\label{fig:ncompare}
 \end{figure}
 %--------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -93,7 +93,7 @@ Therefore
 Which means that it is stable so long as Courant's stability condition is met.
 \\
 \\
-Implementing this scheme with the advection equation of a Gaussian pulse with $c=1$ and $k=h$ and evolving the system over 4 units of time. Figure \ref{laxwen_adv} shows that the pulse is almost perfectly propagated by this method. The L2-norm of the error can be seen in Figure \ref{laxwen_adv_l2}
+Implementing this scheme with the advection equation of a Gaussian pulse with $c=1$ and $k=h$ and evolving the system over 4 units of time. Figure \ref{laxwen_adv} shows that the pulse is almost perfectly propagated by this method. The L2-norm of the error can be seen in Figure \ref{laxwen_adv_l2} showing that the method is very stable.
 %------------------------------------------------------------------------------------------------------------------------------------------
 \begin{figure}[H]
  \centering
@@ -109,7 +109,28 @@ Implementing this scheme with the advection equation of a Gaussian pulse with $c
  \label{laxwen_adv_l2}
 \end{figure}
 %------------------------------------------------------------------------------------------------------------------------------------------
-
-
+Comparing the Lax-Wendroff to the centered leapfrog and upwind Euler, we find that it, much like the Upwind Euler, perfectly projects the initial information whereas the leapfrog generates an error due to the decoupled projection of information as shown by Figure \ref{fig:stepcompare} and with the different step sizes analyzed in Figure \ref{fig:ncompare}.
+%------------------------------------------------------------------------------------------------------------------------------------------
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.3\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{Images/5_lw_compare.jpg}
+  \caption{Lax-Wendroff}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.3\textwidth}
+  \includegraphics[width=\textwidth]{Images/5_cl_compare.jpg}
+  \caption{Centered Leapfrog}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.3\textwidth}
+  \includegraphics[width=\textwidth]{Images/5_ue_compare.jpg}
+  \caption{Upwind Euler}
+\end{subfigure}
+\caption{Comparison of methods at different step sizes.}
+\label{fig:ncompare}
+\end{figure}
+%--------------------------------------------------------------------------------------------------------------------------------------------
 
 
