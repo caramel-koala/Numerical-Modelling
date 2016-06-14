@@ -1,0 +1,10 @@
+\chapter{Flux Conservative Methods}
+In this chapter we will analyze the different types of discrete evolutionary methods. We will then more deeply analyze the Flux Conservative and REA schemes and see how they are similar in  their solutions although very different in how they approach the problem.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Comparison of Methods}
+\subsection{Finite Differencing}
+%------------------------------------------------------------------------------------------------
+\subsection{Flux Conservation}
+%------------------------------------------------------------------------------------------------
+\subsection{Reconstruction Methods}
+%------------------------------------------------------------------------------------------------
