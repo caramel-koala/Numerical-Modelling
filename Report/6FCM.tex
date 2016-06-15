@@ -2,8 +2,9 @@
 In this chapter we will analyze the different types of discrete evolutionary methods. We will then more deeply analyze the Flux Conservative and REA schemes and see how they are similar in  their solutions although very different in how they approach the problem.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Comparison of Methods}
+Discrete evolutionary methods can be grouped into three main classes, each different in the way in which the approach the problem of numerically approximating the solution of an equation. All of these methods work by initially turning the continuous initial solution into a discrete set of points but differ in how they use these points to obtain a solution. Therefore with all of these solutions, using a smaller spacing with a finer mesh allows for greater accuracy.
 \subsection{Finite Differencing}
-
+The Finite Difference Method (FDM) solves a differential equation by approximating the solution by solving reordered Taylor polynomials. Depending on how these polynomials are used and to what order the Taylor series is expanded, many different solution forms can be obtained. These solutions are more accurate with a higher order expansion, but are more expensive to calculate.
 %------------------------------------------------------------------------------------------------
 \subsection{Flux Conservation}
 %------------------------------------------------------------------------------------------------

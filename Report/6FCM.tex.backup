@@ -2,9 +2,16 @@
 In this chapter we will analyze the different types of discrete evolutionary methods. We will then more deeply analyze the Flux Conservative and REA schemes and see how they are similar in  their solutions although very different in how they approach the problem.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Comparison of Methods}
+Discrete evolutionary methods can be grouped into three main classes, each different in the way in which the approach the problem of numerically approximating the solution of an equation. All of these methods work by initially turning the continuous initial solution into a discrete set of points but differ in how they use these points to obtain a solution.
 \subsection{Finite Differencing}
+
 %------------------------------------------------------------------------------------------------
 \subsection{Flux Conservation}
 %------------------------------------------------------------------------------------------------
 \subsection{Reconstruction Methods}
-%------------------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Advection of Flux Conservative Schemes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Lax-Fredrich as a Flux Conservative Scheme}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Godunov's Method}

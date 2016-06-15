@@ -1,21 +1,23 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of Errors in FDM variants in log plot\relax }}{4}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of Errors in FDM variants in log plot\relax }}{5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Advection characteristic\relax }}{7}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Wave Equation Charactersitics\relax }}{8}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Advection Equation and Approximations after 2 seconds\relax }}{10}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Change in L2-norm over time of Centered Euler Evolution\relax }}{11}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution\relax }}{11}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Advection Equation and Approximations after 9 seconds\relax }}{12}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution with $k = h$\relax }}{13}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution with $k = 0.5h$\relax }}{13}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution with $k = 2h$\relax }}{14}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Wave Equation and Approximations after 9 seconds\relax }}{14}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Change in the L2-norm of the error as the spacing varies\relax }}{15}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Advection characteristic\relax }}{8}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Wave Equation Charactersitics\relax }}{9}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Advection Equation and Approximations after 2 seconds\relax }}{11}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Change in L2-norm over time of Centered Euler Evolution\relax }}{12}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution\relax }}{12}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Advection Equation and Approximations after 9 seconds\relax }}{13}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution with $k = h$\relax }}{14}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution with $k = 0.5h$\relax }}{14}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Change in L2-norm over time of Leapfrog Evolution with $k = 2h$\relax }}{15}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Wave Equation and Approximations after 9 seconds\relax }}{15}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Change in the L2-norm of the error as the spacing varies\relax }}{16}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Lax-Wendroff Approximation after 4 seconds\relax }}{24}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces L2 norm of the Error of Lax-Wendroff Approximation over 4 seconds\relax }}{25}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparing Lax-Wendroff, Centered Leapfrog and Upwind Euler.\relax }}{25}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Comparison of methods at different step sizes.\relax }}{26}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Lax-Wendroff Approximation after 4 seconds\relax }}{25}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces L2 norm of the Error of Lax-Wendroff Approximation over 4 seconds\relax }}{26}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparing Lax-Wendroff, Centered Leapfrog and Upwind Euler.\relax }}{26}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Comparison of methods at different step sizes.\relax }}{27}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
