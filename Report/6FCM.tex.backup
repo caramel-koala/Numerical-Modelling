@@ -2,13 +2,22 @@
 In this chapter we will analyze the different types of discrete evolutionary methods. We will then more deeply analyze the Flux Conservative and REA schemes and see how they are similar in  their solutions although very different in how they approach the problem.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Comparison of Methods}
-Discrete evolutionary methods can be grouped into three main classes, each different in the way in which the approach the problem of numerically approximating the solution of an equation. All of these methods work by initially turning the continuous initial solution into a discrete set of points but differ in how they use these points to obtain a solution.
+Discrete evolutionary methods can be grouped into three main classes, each different in the way in which the approach the problem of numerically approximating the solution of an equation. All of these methods work by initially turning the continuous initial solution into a discrete set of points but differ in how they use these points to obtain a solution. Therefore with all of these solutions, using a smaller spacing with a finer mesh allows for greater accuracy.
 \subsection{Finite Differencing}
-
+The Finite Difference Method (FDM) solves a differential equation by approximating the solution by solving reordered Taylor polynomials. Depending on how these polynomials are used and to what order the Taylor series is expanded, many different solution forms can be obtained. These solutions are more accurate with a higher order expansion, but at the cost of being more expensive to calculate.
 %------------------------------------------------------------------------------------------------
 \subsection{Flux Conservation}
-%------------------------------------------------------------------------------------------------
+Flux Conservative Methods (FCMs) seek to evolve an equation by using the conservation laws to preserve a conservative property of the system, namely $u(x,t)$. By comparing $u(x,t)$ to, for example, the physical form of the density of a gas in a sealed pipe we can assume that the total amount of gas in the pipe is constant. The amount of gas between two points, $x_1$ and $x_2$, described by $M(t)=\int_{x_1}^{x_2}u(x,t)dx$, will change over time as 
+\begin{equation}
+\begin{align}
+  \frac{d}{dt}M(t)	&= \frac{d}{dt}\int_{x_1}^{x_2}u(x,t)dx  	\\
+		        &= F(x_1,t) - F(x_2,t)				\\
+\end{align}
+\end{equation}
+Where $F(x,t)$ describes the flux through a point. This describes the fact that ``gas'' enters the region at $x_1$ and exits at $x_2$ and therefore $\frac{d}{dt}M(t)$ is conservative. This can then be extended to form what is know as conservative form as seen in Equation \ref{eq:conf}. Unlike the FDM, which uses the differential form of an equation to evolve it, FCM uses the integral form, $\frac{d}{dt}M(t)$, to evolve a solution. The schemes differ in the way in which the flux is calculated, with a more complex flux approximation yielding a higher accuracy.
+%------------------------------------------------------------------------------------------------                                                                                                                
 \subsection{Reconstruction Methods}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Advection of Flux Conservative Schemes}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
