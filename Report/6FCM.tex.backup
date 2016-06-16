@@ -17,9 +17,10 @@ Flux Conservative Methods (FCMs) seek to evolve an equation by using the conserv
 Where $F(x,t)$ describes the flux through a point. This describes the fact that ``gas'' enters the region at $x_1$ and exits at $x_2$ and therefore $\frac{d}{dt}M(t)$ is conservative. This can then be extended to form what is know as conservative form as seen in Equation \ref{eq:conf}. Unlike the FDM, which uses the differential form of an equation to evolve it, FCM uses the integral form, $\frac{d}{dt}M(t)$, to evolve a solution. The schemes differ in the way in which the flux is calculated, with a more complex flux approximation yielding a higher accuracy.
 %------------------------------------------------------------------------------------------------                                                                                                                
 \subsection{Reconstruction Methods}
-
+Also referred to as Reconstruct-Evolve-Average (R-E-A) algorithms, these work by assuming the function is made up of a set of piecewise constant values. The system is evolved by fist fitting the average value to a cell and assuming the value is constant across the cell (Reconstruction). The piecewise function is then evolved over one time step, with values of the cell being carried into one another. The new values are then averaged by the ``amount'' of the function which has left the cell and the amount which has entered. These methods can be improved by replacing the piecewise constant with sloping equations or with polynomials to allow for better accuracy with the function being smoother at the cell boundaries.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Advection of Flux Conservative Schemes}
+\section{Advection by Flux Conservative Schemes}
+Implementing the advection equation using a FCM we can see that the optimal flux boundaries can be given by the midpoint between two discrete points. Setting these boundaries as the boundaries of a cell, we can set the flux as the average value of the cell. For some $x_i$ this is then given as $c_i=[x_{i-1/2},x_{i+1/2}]$ with $x_{i+1/2} = x_i + h/2$. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Lax-Fredrich as a Flux Conservative Scheme}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
