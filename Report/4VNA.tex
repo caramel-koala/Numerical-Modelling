@@ -2,24 +2,24 @@
 In this chapter we will discuss and analyze the stability of a discrete solution. We will do this by going over the Fourier transform and how it applies to the method. We will then discuss the amplification factor as well as its relation to dissipation and dispersion in a function. The analysis method will then be applied to the advection equation (\ref{vna:adveq}) and diffusion equation (\ref{vna:diffeq}) and the results analyzed.
 %---------------------------------------------------------
 \begin{equation} \label{vna:adveq}
-\begin{align}
-  &u_t + cu_x = 0, \qquad c \in \mathbb{R} \\ 
-\end{align}
+\begin{aligned}
+  &u_t + cu_x = 0, \qquad c \in \mathbb{R} \\
+\end{aligned}
 \end{equation}
 \begin{equation} \label{vna:diffeq}
-\begin{align}
-  &u_{t} - Ku_{xx} = 0, \qquad K \in \mathbb{R} \\ 
-\end{align}
+\begin{aligned}
+  &u_{t} - Ku_{xx} = 0, \qquad K \in \mathbb{R} \\
+\end{aligned}
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fourier Transforms}\label{vna:four}
 Fourier transforms allow us to shift an equation from one which is in the spatial domain ($x$) to one which is in the frequency domain ($\omega$). The general pair of equations for this is given as:
 %-------------------------------------------------------------
 \begin{equation*}
-\begin{align}
+\begin{aligned}
  \mathcal{F}[f] &= \hat{f}(\omega) &= \int_{-\infty}^{\infty} e^{-i \omega x} f(x) dx \\
  \mathcal{F} ^{-1}[\hat{f}] &= f(x) &= \int_{-\infty}^{\infty} \frac{1}{2\pi} e^{i \omega x} \hat{f}(x) dx
-\end{align}
+\end{aligned}
 \end{equation*}
 %-------------------------------------------------------------
 With the first equation being the Fourier transform of $f(x)$ to the frequency domain and the second being its inverse back to the spatial domain.
@@ -28,16 +28,16 @@ With the first equation being the Fourier transform of $f(x)$ to the frequency d
 When applied to derivatives, Fourier transforms exhibit a useful property whereby the derivatives of the function in the spatial domain become complex polynomial scalings of the function in the frequency domain.
 %-------------------------------------------------------------
 \begin{equation*}
-\begin{align}
+\begin{aligned}
   \mathcal{F}[\partial_xf] &= -i\omega x \hat{f}\\
   \mathcal{F}[\partial^2_{xx}f] &= -\omega^2 x \hat{f}
-\end{align}
+\end{aligned}
 \end{equation*}
 %-------------------------------------------------------------
 This property gives us some insight into the nature of a function and its evolution. This can be seen by the analysis of the advection equation shown below. The magnitude of the Fourier transform of $u$, $\hat{u}$, is constant by the magnitude of the complex scalar $C$ since $||e^{ic \omega t}||	= 1$, this indicates that it is stable as time evolves.
 s%-------------------------------------------------------------
 \begin{equation*}
-\begin{align}
+\begin{aligned}
   \mathcal{F}[u_t + cu_x ] &= \mathcal{F}[0]	\\
   \hat{u}_t - i \omega c \hat{u} &= 0 	\\
   \frac{\hat{u}_t}{\hat{u}} &= i \omega c	\\
@@ -45,13 +45,13 @@ s%-------------------------------------------------------------
   ||\hat{u}|| &= ||Ce^{ic \omega t}||		\\
 	      &= ||C||\cdot||e^{ic \omega t}||	\\
 	      &= ||C||
-\end{align}
+\end{aligned}
 \end{equation*}
 %--------------------------------------------------------------
 Applying the same method to the diffusion equation shows that the function is dissipative over time due to its negative exponential relationship with $\omega$. This means that the function loses energy over time.
 %--------------------------------------------------------------
 \begin{equation*}
-\begin{align}
+\begin{aligned}
   \mathcal{F}[u_t - ku_{xx} ] &= \mathcal{F}[0]	\\
   \hat{u}_t + \omega^2 k \hat{u} &= 0 	\\
   \frac{\hat{u}_t}{\hat{u}} &= i \omega c	\\
@@ -59,7 +59,7 @@ Applying the same method to the diffusion equation shows that the function is di
   ||\hat{u}|| &= ||Ce^{- \omega^2 k t}||		\\
 	      &= ||C||\cdot||e^{- \omega^2 k t}||	\\
 	      &= ||C||
-\end{align}
+\end{aligned}
 \end{equation*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Amplification Factor}
@@ -84,60 +84,60 @@ This allows us to simplistically analyze the evolution of a function, as the $n$
 The value of $\hat{Q}$ for a specific frequency therefore determines how stable the difference scheme is.
 %--------------------------------------------------------------
 \begin{equation*}
-\begin{align}
+\begin{aligned}
   \hat{Q} &> 1 &\Rightarrow ||\hat{v}^n|| &= ||\hat{v}^0|| &\Rightarrow &\text{Solution is unstable} \\
   \hat{Q} &< 1 &\Rightarrow ||\hat{v}^n|| &< ||\hat{v}^0|| &\Rightarrow &\text{Solution is stable, but dissipative} \\
   \hat{Q} &= 1 &\Rightarrow ||\hat{v}^n|| &> ||\hat{v}^0|| &\Rightarrow &\text{Solution is stable}
-\end{align}
+\end{aligned}
 \end{equation*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Examples}
 %--------------------------------------------------------------
 \subsection{Centered Euler}
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     v_j^{n+1}	&= v_j^n - c\frac{k}{2h}(v_{j+1}^n - v_{j-1}^n) + O(kh^2)	\\
     \text{Substituting Equation \ref{vna:eq:freq}} 				\\
     \hat{v}^{n+1}e^{i\omega hj} &= \hat{v}^ne^{i\omega hj} - c\frac{k}{2h} (\hat{v}^ne^{i\omega h(j+1)} - \hat{v}^ne^{i\omega h(j-1)})						    \\
     \hat{v}^{n+1}e^{i\omega hj} &= \hat{v}^ne^{i\omega hj} - c\frac{k}{2h} e^{i\omega hj} \hat{v}^n (e^{i\omega h} - e^{-i\omega h})							    \\
     \hat{v}^{n+1} &= \hat{v}^n - ic\frac{k}{h} \hat{v}^n \sin{\omega h}		\\
 		  &= \hat{v}^n(1 - ic\frac{k}{h} \sin{\omega h})
-\end{align}
+\end{aligned}
 \end{equation*}
 Now substituting Equation \ref{vna:eq:Q}, we get
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     \hat{Q}\hat{v}^n &= hat{v}^n(1 - ic\frac{k}{h} \sin{\omega h})	\\
     \hat{Q} &= 1 - ic\frac{k}{h} \sin{\omega h}				\\
-\end{align}
+\end{aligned}
 \end{equation*}
 Now, $||\hat{Q}|| = 1$ where $||1 - ic\frac{k}{h} \sin{\omega h}|| = 1$. Therefore $ic\frac{k}{h} \sin{\omega h}$ must be zero for it to be stable, meaning $\sin{\omega h}$ must be zero, which only occurs at $\omega=\frac{m\pi}{h}$ where $m \in \mathbb{Z}$. Since, in practice, the function is influenced by many small noisy frequencies, the solution will be unstable as $\hat{Q}>1$ for these and their influence will compound over time due to this.
 %--------------------------------------------------------------
 \subsection{Upwind Euler}
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     v_j^{n+1}	&= v_j^n - c\frac{k}{h}(v_{j+1}^n - v_j^n) + O(kh)					\\
     \text{Substituting Equation \ref{vna:eq:freq}} 							\\
     \hat{v}^{n+1}e^{i\omega hj} &= \hat{v}^ne^{i\omega hj} - c\frac{k}{h} (\hat{v}^ne^{i\omega h(j+1)} - \hat{v}^ne^{i\omega hj})									    \\
     \hat{v}^{n+1}e^{i\omega hj} &= \hat{v}^ne^{i\omega hj} - c\frac{k}{h} \hat{v}^ne^{i\omega hj} (e^{i\omega h} - 1)												    \\
     \hat{v}^{n+1}e^{i\omega hj} &= \hat{v}^ne^{i\omega hj}(1 - c\frac{k}{h} (e^{i\omega h} - 1))	\\
     \hat{v}^{n+1} &= \hat{v}^n(1 - c\frac{k}{h} (e^{i\omega h} - 1))					\\
-\end{align}
+\end{aligned}
 \end{equation*}
 Now substituting Equation \ref{vna:eq:Q}, we get
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     \hat{Q}\hat{v}^n &= \hat{v}^n(1 - c\frac{k}{h} (e^{i\omega h} - 1))	\\
     \hat{Q} &= 1 - c\frac{k}{h} (e^{i\omega h} - 1)			\\
     \text{Let } c\frac{k}{h} = \alpha 					\\
     \hat{Q} &= 1 - \alpha (e^{i\omega h} - 1)				\\
 	    &= 1 - \alpha (\cos \omega h 	+ i \sin \omega h - 1)	\\
 	    &= 1 - \alpha (\cos \omega h - 1) 	- \alpha i \sin \omega h\\
-\end{align}
+\end{aligned}
 \end{equation*}
 Now, calculating the magnitude of $\hat{Q}$, gives us:
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     \hat{Q}^2 &= (1 - \alpha (\cos \omega h  - 1)	- \alpha i \sin \omega h )^2									\\
 	      &= (1 - \alpha (\cos \omega h  - 1))^2 	- (\alpha i \sin \omega h )^2									\\
 	      &= 1  - 2\alpha (\cos \omega h  - 1) 	+ \alpha^2(\cos \omega h  -1)^2	+ \alpha^2 \sin^2 \omega h					\\
@@ -145,78 +145,78 @@ Now, calculating the magnitude of $\hat{Q}$, gives us:
 	      &= 1  - 2\alpha (\cos \omega h  - 1) 	+ 2\alpha^2 - 2\alpha^2 \cos \omega h								\\
 	      &= 1  - 2\alpha (\cos \omega h  - 1 + \alpha - \alpha \cos \omega h)									\\
 	      &= 1  - 2\alpha(1 - \alpha) (\cos \omega h  - 1)												\\
-\end{align}
+\end{aligned}
 \end{equation*}
 Therefore, for $||\hat{Q}|| \leq 1$, $1-\alpha=0$, and so:
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     1 - \alpha 	&\leq 0			\\
     1 		&\leq \alpha		\\
     1 		&\leq c \frac{k}{h}	\\
     \frac{h}{k}	&\leq c			\\
-\end{align}
+\end{aligned}
 \end{equation*}
 Therefore the Upwind Euler method is stable when Courant's stability condition is met.
 %--------------------------------------------------------------
 \subsection{Leapfrog Advection Equation}
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     v_j^{n+1}	&= v_j^{n-1} - c\frac{k}{h}(v_{j+1}^n - v_{j-1}^n) 										\\
     \text{Substituting Equation \ref{vna:eq:freq}} 												\\
     \hat{v}^{n+1}e^{i\omega hj} &= \hat{v}^{n-1}e^{i\omega hj} 	- c\frac{k}{h} (\hat{v}^ne^{i\omega h(j+1)} - \hat{v}^ne^{i\omega h(j-1)})	\\
 				&= \hat{v}^{n-1}e^{i\omega hj} 	- c\frac{k}{h} \hat{v}^{n}e^{i\omega hj} (e^{i\omega h} - e^{-i\omega h})	\\
     \hat{v}^{n+1}		&= \hat{v}^{n-1}		- 2 i c\frac{k}{h} \hat{v}^{n} \sin \omega h					\\
-\end{align}
+\end{aligned}
 \end{equation*}
 Now substituting Equation \ref{vna:eq:Q} and remembering Equation \ref{vna:eq:Qn} we get
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     \hat{Q}^2\hat{v}^{n-1}	&= \hat{v}^{n-1} - 2 i c\frac{k}{h} \hat{Q} \hat{v}^{n-1} \sin \omega h				\\
     \hat{Q}^2	&= 1 - 2 i c\frac{k}{h} \hat{Q} \sin \omega h									\\
     0 		&= \hat{Q}^2 + 2 i c\frac{k}{h} \sin( \omega h )\hat{Q} - 1							\\
     \hat{Q} 	& = \frac{-2 i c\frac{k}{h} \sin( \omega h ) \pm \sqrt{(2 i c\frac{k}{h} \sin( \omega h ))^2 - 4(1)(-1)}}{2(1)}	\\
 		& = -i c\frac{k}{h} \sin( \omega h ) \pm \frac{ \sqrt{4 -4 c^2\frac{k^2}{h^2} \sin^2( \omega h )}}{2}		\\
 		& = -i c\frac{k}{h} \sin( \omega h ) \pm \sqrt{1 -c^2\frac{k^2}{h^2} \sin^2( \omega h )}			\\
-\end{align}
+\end{aligned}
 \end{equation*}
 Now, calculating the magnitude of $\hat{Q}$, gives us:
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     \hat{Q}^2 	& = \bigg(-i c\frac{k}{h} \sin( \omega h ) \pm \sqrt{1 -c^2\frac{k^2}{h^2} \sin^2( \omega h )}\bigg)^2	\\
 		& = (-i c\frac{k}{h} \sin( \omega h ))^2 + \bigg(\sqrt{1 -c^2\frac{k^2}{h^2} \sin^2( \omega h )}\bigg)^2\\
 		& = c^2\frac{k^2}{h^2} \sin^2( \omega h ) + 1 -c^2\frac{k^2}{h^2} \sin^2( \omega h )			\\
 		& = 1
-\end{align}
+\end{aligned}
 \end{equation*}
 This shows that the Leapfrog is stable provided the square rooted term is real, this is only true if:
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     c^2\frac{k^2}{h^2} \sin^2( \omega h ) &< 1	\\
     c^2\frac{k^2}{h^2}  &< 1			\\
     c\frac{k}{h}  &< 1				\\
     c &< \frac{h}{k}				\\
-\end{align}
+\end{aligned}
 \end{equation*}
 Therefore the Leapfrog's stability also depends on Courant's stability condition is met.
 %--------------------------------------------------------------
 \subsection{ Diffusion Equation}
 Using Equation \ref{1ofdm} for the time derivative and Equation \ref{2ofdm2c} for the second spatial derivative, we can transform the diffusion equation and solve for $v_j^{n+1}$. For the sake of removing confusion $K$ will be replaced with $C$.
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     u_t - Cu_{xx} &= 0											\\
     \frac{v_j^{n+1} - v_j^{n}}{k} - C\big( \frac{v_{j+1}^n - 2v_j^n + v_{j-1}^n}{h^2} \big) &= 0	\\
     v_j^{n+1} - v_j^{n} &= kC\big( \frac{v_{j+1}^n - 2v_j^n + v_{j-1}^n}{h^2} \big)			\\
     v_j^{n+1} &= v_j^{n} + C\frac{k}{h^2}(v_{j+1}^n - 2v_j^n + v_{j-1}^n)				\\
-\end{align}
+\end{aligned}
 \end{equation*}
 Substituting Equation \ref{vna:eq:freq}:
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     \hat{v}^{n+1}e^{i\omega hj} &= \hat{v}^{n}e^{i\omega hj} + C\frac{k}{h^2} (\hat{v}^ne^{i\omega h(j+1)} - 2\hat{v}^ne^{i\omega hj} + \hat{v}^ne^{i\omega h(j-1)})	\\
 				&= \hat{v}^{n}e^{i\omega hj} + C\frac{k}{h^2} \hat{v}^ne^{i\omega hj} (e^{i\omega h} - 2 + e^{-i\omega h})				\\
     \hat{v}^{n+1} &= \hat{v}^{n} + C\frac{k}{h^2} \hat{v}^n (2\cos \omega h - 2)											\\
 		  &= (1 + 2C\frac{k}{h^2} (\cos \omega h - 1)) \hat{v}^n											\\
-\end{align}
+\end{aligned}
 \end{equation*}
 Now substituting Equation \ref{vna:eq:Q} we get
 \begin{equation*}
@@ -224,10 +224,10 @@ Now substituting Equation \ref{vna:eq:Q} we get
 \end{equation*}
 For $\hat{Q}$ to be stable and since $\cos \omega h - 1$ varies between $0$ and $-2$
 \begin{equation*}
-\begin{align}
+\begin{aligned}
     2C\frac{k}{h^2} &< 1		\\
     \frac{k}{h^2} &< \frac{1}{2C}	\\
-\end{align}
+\end{aligned}
 \end{equation*}
 This shows that in order for the method to be stable for each doubling of the number of spatial points, the number of time points must be quadrupled.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
