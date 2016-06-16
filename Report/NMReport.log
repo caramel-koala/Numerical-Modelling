@@ -1,7 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.6.16)  16 JUN 2016 15:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.14)  16 JUN 2016 21:17
 entering extended mode
-**./NMReport.tex
-(NMReport.tex
+**"C:/Users/Caramel Koala/Documents/Git stuff/Numerical-Modelling/Report/NMRepo
+rt.tex"
+
+("C:/Users/Caramel Koala/Documents/Git stuff/Numerical-Modelling/Report/NMRepor
+t.tex"
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
@@ -640,23 +643,23 @@ Chapter 6.
 [28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 26--32
+Underfull \hbox (badness 10000) in paragraph at lines 26--31
 
  []
 
-) (7SLM.tex [29]
+[29]) (7SLM.tex [30]
 Chapter 7.
-) [30
+) [31
 
 ] (NMReport.aux) ) 
 Here is how much of TeX's memory you used:
- 5788 strings out of 493335
- 85061 string characters out of 3139234
- 160169 words of memory out of 3000000
- 9189 multiletter control sequences out of 15000+200000
+ 5791 strings out of 493335
+ 85302 string characters out of 3139234
+ 162191 words of memory out of 3000000
+ 9191 multiletter control sequences out of 15000+200000
  14561 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,42p,1055b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,11n,42p,1125b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/P
@@ -674,9 +677,9 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on NMReport.pdf (31 pages, 769848 bytes).
+Output written on NMReport.pdf (32 pages, 774230 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
+ 199 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

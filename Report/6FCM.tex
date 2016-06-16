@@ -27,8 +27,39 @@ Implementing the advection equation using a FCM we can see that the optimal flux
 The adjustment of $1/2$ is due to the fact that the center of a flux cell lies in between two points.
 \\
 \\
-The value of the cell can be seen as the average value of the function between its boundaries, $v^n_j=\frac{1}{h}\int_{x_{j-1/2}}^{x_j+1/2}u(x,t^n)dx$.
+The value of the cell can be seen as the average value of the function between its boundaries, $v^n_j=\frac{1}{h}\int_{x_{j-1/2}}^{x_{j+1/2}}u(x,t^n)dx$, and similarly, $v^{n+1}_j=\frac{1}{h}\int_{x_{j-1/2}}^{x_{j+1/2}}u(x,t^{n+1})dx$. The flux, or change in the value for the cell over its domain from $t^n$ to $t^{n+1}$ can therefore be seen as $hv^{n+1}_j - hv^n_j$ which is equivalent to the difference in the flux values at the boundaries over the time step, $kF^n_{j-1/2} - kF^n_{j+1/2}$. The flux can therefore be seen as the collection of instantaneous fluxes,
+\begin{equation*}
+  F^n_{j-1/2} = \int_{t^{n+1}}^{t^n}f(x_{i-1/2},t)dt
+\end{equation*}
+Now we have
+\begin{equation}\label{eq:flux_upwind}
+\begin{aligned}
+  hv^{n+1}_j - hv^n_j   &=  kF^n_{j-1/2} - kF^n_{j+1/2}\\
+  v^{n+1}_j - v^n_j     &= \frac{k}{h}(cv^n_{j-1} - cv^n_j)\\
+  v^{n+1}_j             &= v^n_j - \frac{ck}{h}(v^n_{j} - v^n_{j-1})
+\end{aligned}
+\end{equation}
+which is the Upwind Euler method. It should be noted that the FCM relies on the value from one cell being projected to its neighbours, therefore $ck\leq h$, meaning that the Courant stability condition must hold as a restriction for these methods.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Lax-Fredrich as a Flux Conservative Scheme}
+\section{Lax-Friedrich as a Flux Conservative Scheme}
+By observing Equation \ref{eq:flux_upwind}, we can see that the general form of a Flux Conservative method is
+\begin{equation}\label{eq:gen_flux}
+  v^{n+1}_j = v^n_j - \frac{k}{h}(F^n_{j-1/2} - F^n_{j+1/2})
+\end{equation}
+We now seek to find a flux function, $F^n_{j-1/2}$, such that the Lax-Friedrich method can be recast to a flux conservative form. Starting with the Lax-Friedrich form for $u_t + f(u)_x = 0$
+\begin{equation*}
+\begin{aligned}
+  v^{n+1}_j &= \frac{1}{2}(v^n_{j+1} + v^n_{j-1}) - \frac{k}{2h}(f(v^n_{j+1})-f(v^n_{j-1})) \\
+  v^{n+1}_j &= v^n_j + \frac{1}{2}(v^n_{j+1} - 2v^n_j + v^n_{j-1}) - \frac{k}{2h}(f(v^n_{j+1}) +f(v^n_j) -f(v^n_j) -f(v^n_{j-1})) \\
+  v^{n+1}_j &= v^n_j + \frac{1}{2}(v^n_{j+1} - v^n_j + v^n_{j-1} - v^n_j) - \frac{k}{2h}(f(v^n_{j+1})) +f(v^n_j) -f(v^n_j) -f(v^n_{j-1})) \\
+  v^{n+1}_j &= v^n_j - \frac{k}{h}(\frac{1}{2}(f(v^n_{j+1}) +f(v^n_j) -f(v^n_j) -f(v^n_{j-1})) - \frac{h}{2k}(v^n_{j+1} - v^n_j + v^n_{j-1} - v^n_j)) \\
+  v^{n+1}_j &= v^n_j - \frac{k}{h}\Bigg(\frac{1}{2}\big(f(v^n_{j+1}) +f(v^n_j)\big) - \frac{1}{2}\big(f(v^n_j) +f(v^n_{j-1})\big) - \frac{h}{2k}\big(v^n_{j+1} - v^n_j\big) +  \frac{h}{2k}\big(v^n_j - v^n_{j-1}\big)\Bigg) \\
+  v^{n+1}_j &= v^n_j - \frac{k}{h}\Bigg(\bigg(\frac{1}{2}\big(f(v^n_{j+1}) +f(v^n_j)\big)- \frac{h}{2k}\big(v^n_{j+1} - v^n_j\big)\bigg) - \bigg(\frac{1}{2}\big(f(v^n_j) +f(v^n_{j-1})\big)  -  \frac{h}{2k}\big(v^n_j - v^n_{j-1}\big) \bigg) \Bigg) \\
+\end{aligned}
+\end{equation*}
+Now we can see that our flux function is
+\begin{equation}
+  F^n_{j-1/2} = \frac{1}{2}\big(f(v^n_j) +f(v^n_{j-1})\big)  -  \frac{h}{2k}\big(v^n_j - v^n_{j-1}\big)
+\end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Godunov's Method} 
