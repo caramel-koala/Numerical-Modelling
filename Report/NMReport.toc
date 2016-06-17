@@ -28,7 +28,7 @@
 \contentsline {subsection}{\numberline {4.3.4} Diffusion Equation}{21}
 \contentsline {chapter}{\numberline {5}Time Evolutions}{23}
 \contentsline {section}{\numberline {5.1}Lax-Friedrichs}{23}
-\contentsline {section}{\numberline {5.2}Lax-Wendroff}{23}
+\contentsline {section}{\numberline {5.2}Lax-Wendroff}{24}
 \contentsline {section}{\numberline {5.3}Implementing and Comparing the Lax-Wendroff}{25}
 \contentsline {chapter}{\numberline {6}Flux Conservative Methods}{28}
 \contentsline {section}{\numberline {6.1}Comparison of Methods}{28}

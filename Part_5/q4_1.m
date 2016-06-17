@@ -9,7 +9,7 @@
 N   = 100;
 x   = linspace(-10,10,N+1);
 h   = get_h(x);
-k   = h;
+k   = h/2;
 tmax= 4;
 t   = (0:k:tmax);
 c   = 1;
