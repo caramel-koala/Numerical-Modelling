@@ -8,12 +8,10 @@ The Finite Difference Method (FDM) solves a differential equation by approximati
 %------------------------------------------------------------------------------------------------
 \subsection{Flux Conservation}
 Flux Conservative Methods (FCMs) seek to evolve an equation by using the conservation laws to preserve a conservative property of the system, namely $u(x,t)$. By comparing $u(x,t)$ to, for example, the physical form of the density of a gas in a sealed pipe we can assume that the total amount of gas in the pipe is constant. The amount of gas between two points, $x_1$ and $x_2$, described by $M(t)=\int_{x_1}^{x_2}u(x,t)dx$, will change over time as
-\begin{equation}
-\begin{aligned}
+\begin{align*}
   \frac{d}{dt}M(t)	&= \frac{d}{dt}\int_{x_1}^{x_2}u(x,t)dx  	\\
 		        &= F(x_1,t) - F(x_2,t)				\\
-\end{aligned}
-\end{equation}
+\end{align*}
 Where $F(x,t)$ describes the flux through a point. This describes the fact that ``gas'' enters the region at $x_1$ and exits at $x_2$ and therefore $\frac{d}{dt}M(t)$ is conservative. This can then be extended to form what is know as conservative form as seen in Equation \ref{eq:conf}. Unlike the FDM, which uses the differential form of an equation to evolve it, FCM uses the integral form, $\frac{d}{dt}M(t)$, to evolve a solution. The schemes differ in the way in which the flux is calculated, with a more complex flux approximation yielding a higher accuracy.
 %------------------------------------------------------------------------------------------------
 \subsection{Reconstruction Methods}
@@ -58,4 +56,15 @@ Now we can see that our flux function is
   F^n_{j-1/2} = \frac{1}{2}\big(f(v^n_j) +f(v^n_{j-1})\big)  -  \frac{h}{2k}\big(v^n_j - v^n_{j-1}\big)
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Godunov's Method} 
+\section{Godunov's Method}
+The Piecewise Constant Method, also known as Godunov's Method, is a Reconstructive Method. Similarly, the constant value assigned to the cell is the average of the cell whose boundaries are again defined as $[x_{j-1/2},x_{j+1/2}]$. The value of the cell is again defined as $v^n_j=\frac{1}{h}\int_{x_{j-1/2}}^{x_{j+1/2}}u(x,t^n)dx$. With the advection equation specifically this value is shifted across at the rate of $ck$ with a cell width of $h$. This propagated value is again then averaged as the value of $v^{n+1}_j$. For the advection equation this can be seen as
+\begin{align*}
+  v^{n+1}_j &= \frac{1}{h}(ckv^n_{j-1} + (h-ck)v^n_j) \\
+            &= \frac{1}{h}(ckv^n_{j-1} + hv^n_j - ckv^n_j) \\
+            &= v^n_j + \frac{ck}{h}(v^n_{j-1} - v^n_j) \\
+            &= v^n_j - \frac{ck}{h}(v^n_j - v^n_{j-1}) \\
+\end{align*} 
+which again is exactly equivalent to the Upwind Euler Method.
+\\
+\\
+This therefore shows that while having different approaches, they all yield equivalent results.
