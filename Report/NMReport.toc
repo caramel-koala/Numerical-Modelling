@@ -40,8 +40,9 @@
 \contentsline {section}{\numberline {6.4}Godunov's Method}{30}
 \contentsline {chapter}{\numberline {7}Slope Limiter Methods}{31}
 \contentsline {section}{\numberline {7.1}Method Recap}{31}
-\contentsline {section}{\numberline {7.2}Slope Limiter Methods}{31}
-\contentsline {subsection}{\numberline {7.2.1}Minmod}{31}
-\contentsline {subsection}{\numberline {7.2.2}Superbee}{31}
-\contentsline {subsection}{\numberline {7.2.3}MC Limiter}{31}
-\contentsline {section}{\numberline {7.3}The Inviscid Burgers' Equation}{31}
+\contentsline {section}{\numberline {7.2}Slope Limiter Methods}{32}
+\contentsline {subsection}{\numberline {7.2.1}Minmod}{32}
+\contentsline {subsection}{\numberline {7.2.2}Superbee}{32}
+\contentsline {subsection}{\numberline {7.2.3}MC Mod}{32}
+\contentsline {subsection}{\numberline {7.2.4}Analysis}{32}
+\contentsline {chapter}{\numberline {8}The Inviscid Burgers' Equation}{33}

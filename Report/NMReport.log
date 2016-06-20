@@ -1,14 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.25)  18 JUN 2016 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.6.16)  20 JUN 2016 19:59
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**NMReport.tex
-(./NMReport.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 3 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+**"C:/Users/Caramel Koala/Documents/Git Gud/Numerical-Modelling/Report/NMReport
+.tex"
+
+("C:/Users/Caramel Koala/Documents/Git Gud/Numerical-Modelling/Report/NMReport.
+tex"
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,25 +25,25 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/03 v2.15a AMS math features
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/03/10 v2.15b AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count88
 LaTeX Info: Redefining \frac on input line 199.
@@ -57,8 +58,8 @@ LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count93
 \c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
@@ -79,17 +80,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks18
-LaTeX Info: Redefining \[ on input line 2735.
-LaTeX Info: Redefining \] on input line 2736.
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks19
 \thm@bodyfont=\toks20
@@ -100,41 +101,41 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@postskip=\skip47
 \thm@headsep=\skip48
 \dth@everypar=\toks24
-) (./mcode.sty
+) (mcode.sty
 -- Package: `mcode' 2.3 <2012/08/31> --
 Package: mcode 2012/08/31 2.3
  - settings optimized for display (colour formating)
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count100
 )
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
 )
@@ -151,18 +152,18 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \lst@lineno=\count106
 \lst@maxwidth=\dimen115
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count107
 \lst@skipnumbers=\count108
 \lst@framebox=\box29
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -177,7 +178,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 334.
@@ -244,24 +245,24 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 96.
 )
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count109
 \float@exts=\toks27
@@ -269,11 +270,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks28
 \@floatcapt=\box31
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen118
 \captionmargin@=\dimen119
@@ -287,15 +288,15 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 \c@subfigure=\count111
 \c@subtable=\count112
 )
-(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip49
-) (./NMReport.aux)
+) (NMReport.aux)
 \openout1 = `NMReport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -312,12 +313,13 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 29.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 29.
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
 \scratchdimen=\dimen125
@@ -332,40 +334,39 @@ LaTeX Font Info:    ... okay on input line 29.
 \everyMPtoPDFconversion=\toks30
 )
 \c@lstlisting=\count119
- (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+ ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
@@ -374,45 +375,41 @@ Package etexcmds Info: Could not find \expanded.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Try loading font information for U+msa on input line 30.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 30.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./NMReport.toc [1
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (NMReport.toc [1
 
 ])
 \tf@toc=\write3
 \openout3 = `NMReport.toc'.
 
- [2] (./NMReport.lof)
+ [2] (NMReport.lof)
 \tf@lof=\write4
 \openout4 = `NMReport.lof'.
 
 
-(./1Intro.tex [3
+(1Intro.tex [3
 
 ]
 Chapter 1.
-) (./2FD.tex [4
+) (2FD.tex [4
 
 ]
 Chapter 2.
-<Images/Error.jpg, id=25, 1927.2pt x 952.55875pt>
+<Images/Error.jpg, id=24, 1927.2pt x 952.55875pt>
 File: Images/Error.jpg Graphic file (type jpg)
  <use Images/Error.jpg>
 Package pdftex.def Info: Images/Error.jpg used on input line 6.
@@ -420,7 +417,7 @@ Package pdftex.def Info: Images/Error.jpg used on input line 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--16
 \OT1/cmr/m/n/10 round-ing points such that $\OML/cmm/m/it/10 dv[] \OMS/cmsy/m/n
-/10 ^^Y []$\OT1/cmr/m/n/10 .
+/10  []$\OT1/cmr/m/n/10 .
  []
 
 
@@ -432,8 +429,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--16
 
  <./Images/Error.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 33--37
-\OT1/cmr/m/n/10 such that $\OML/cmm/m/it/10 d[]v[] \OMS/cmsy/m/n/10 ^^Y []$\OT1
-/cmr/m/n/10 .
+\OT1/cmr/m/n/10 such that $\OML/cmm/m/it/10 d[]v[] \OMS/cmsy/m/n/10  []$\OT1/c
+mr/m/n/10 .
  []
 
 
@@ -441,7 +438,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--37
 
  []
 
-) (./3TI.tex [6]
+) (3TI.tex [6]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--20
@@ -468,40 +465,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--34
 
 [7
 
-] <Images/advection_hlk.jpg, id=43, 570.13pt x 422.57875pt>
+] <Images/advection_hlk.jpg, id=42, 570.13pt x 422.57875pt>
 File: Images/advection_hlk.jpg Graphic file (type jpg)
 
 <use Images/advection_hlk.jpg>
 Package pdftex.def Info: Images/advection_hlk.jpg used on input line 68.
 (pdftex.def)             Requested size: 140.92793pt x 104.45154pt.
 
-<Images/advection_h=k.jpg, id=44, 578.16pt x 366.36874pt>
+<Images/advection_h=k.jpg, id=43, 578.16pt x 366.36874pt>
 File: Images/advection_h=k.jpg Graphic file (type jpg)
 
 <use Images/advection_h=k.jpg>
 Package pdftex.def Info: Images/advection_h=k.jpg used on input line 74.
 (pdftex.def)             Requested size: 140.92793pt x 89.29991pt.
 
-<Images/advection_hgk.jpg, id=45, 570.13pt x 422.57875pt>
+<Images/advection_hgk.jpg, id=44, 570.13pt x 422.57875pt>
 File: Images/advection_hgk.jpg Graphic file (type jpg)
 
 <use Images/advection_hgk.jpg>
 Package pdftex.def Info: Images/advection_hgk.jpg used on input line 80.
 (pdftex.def)             Requested size: 140.92793pt x 104.45154pt.
 
-<Images/wave_hlk.jpg, id=46, 570.13pt x 422.57875pt>
+<Images/wave_hlk.jpg, id=45, 570.13pt x 422.57875pt>
 File: Images/wave_hlk.jpg Graphic file (type jpg)
  <use Images/wave_hlk.jpg>
 Package pdftex.def Info: Images/wave_hlk.jpg used on input line 92.
 (pdftex.def)             Requested size: 140.92793pt x 104.45154pt.
 
-<Images/wave_h=k.jpg, id=47, 578.16pt x 373.395pt>
+<Images/wave_h=k.jpg, id=46, 578.16pt x 373.395pt>
 File: Images/wave_h=k.jpg Graphic file (type jpg)
  <use Images/wave_h=k.jpg>
 Package pdftex.def Info: Images/wave_h=k.jpg used on input line 98.
 (pdftex.def)             Requested size: 140.92793pt x 91.01253pt.
 
-<Images/wave_hgk.jpg, id=48, 578.16pt x 383.4325pt>
+<Images/wave_hgk.jpg, id=47, 578.16pt x 383.4325pt>
 File: Images/wave_hgk.jpg Graphic file (type jpg)
  <use Images/wave_hgk.jpg>
 Package pdftex.def Info: Images/wave_hgk.jpg used on input line 104.
@@ -509,14 +506,14 @@ Package pdftex.def Info: Images/wave_hgk.jpg used on input line 104.
 
 [8 <./Images/advection_hlk.jpg> <./Images/advection_h=k.jpg> <./Images/advectio
 n_hgk.jpg>] [9 <./Images/wave_hlk.jpg> <./Images/wave_h=k.jpg> <./Images/wave_h
-gk.jpg>] [10] <Images/center_euler_adv.jpg, id=60, 562.1pt x 421.575pt>
+gk.jpg>] [10] <Images/center_euler_adv.jpg, id=59, 562.1pt x 421.575pt>
 File: Images/center_euler_adv.jpg Graphic file (type jpg)
 
 <use Images/center_euler_adv.jpg>
 Package pdftex.def Info: Images/center_euler_adv.jpg used on input line 195.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
 
-<Images/center_euler_adv_l2.jpg, id=61, 562.1pt x 421.575pt>
+<Images/center_euler_adv_l2.jpg, id=60, 562.1pt x 421.575pt>
 File: Images/center_euler_adv_l2.jpg Graphic file (type jpg)
 
 <use Images/center_euler_adv_l2.jpg>
@@ -524,28 +521,28 @@ Package pdftex.def Info: Images/center_euler_adv_l2.jpg used on input line 201.
 
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
  [11 <./Images/center_euler_adv.jpg>]
-<Images/leapfrog_adv_l2.jpg, id=65, 562.1pt x 421.575pt>
+<Images/leapfrog_adv_l2.jpg, id=64, 562.1pt x 421.575pt>
 File: Images/leapfrog_adv_l2.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_adv_l2.jpg>
 Package pdftex.def Info: Images/leapfrog_adv_l2.jpg used on input line 211.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
 
-<Images/leapfrog_adv.jpg, id=66, 562.1pt x 421.575pt>
+<Images/leapfrog_adv.jpg, id=65, 562.1pt x 421.575pt>
 File: Images/leapfrog_adv.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_adv.jpg>
 Package pdftex.def Info: Images/leapfrog_adv.jpg used on input line 217.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
  [12 <./Images/center_euler_adv_l2.jpg> <./Images/leapfrog_adv_l2.jpg>]
-<Images/leapfrog_wave_l2.jpg, id=71, 562.1pt x 421.575pt>
+<Images/leapfrog_wave_l2.jpg, id=70, 562.1pt x 421.575pt>
 File: Images/leapfrog_wave_l2.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_wave_l2.jpg>
 Package pdftex.def Info: Images/leapfrog_wave_l2.jpg used on input line 231.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
 
-<Images/leapfrog_wave_l2_halfk.jpg, id=72, 562.1pt x 421.575pt>
+<Images/leapfrog_wave_l2_halfk.jpg, id=71, 562.1pt x 421.575pt>
 File: Images/leapfrog_wave_l2_halfk.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_wave_l2_halfk.jpg>
@@ -553,7 +550,7 @@ Package pdftex.def Info: Images/leapfrog_wave_l2_halfk.jpg used on input line 2
 37.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
  [13 <./Images/leapfrog_adv.jpg>]
-<Images/leapfrog_wave_l2_2k.jpg, id=76, 562.1pt x 421.575pt>
+<Images/leapfrog_wave_l2_2k.jpg, id=75, 562.1pt x 421.575pt>
 File: Images/leapfrog_wave_l2_2k.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_wave_l2_2k.jpg>
@@ -561,21 +558,21 @@ Package pdftex.def Info: Images/leapfrog_wave_l2_2k.jpg used on input line 243.
 
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
 
-<Images/leapfrog_wave.jpg, id=77, 562.1pt x 421.575pt>
+<Images/leapfrog_wave.jpg, id=76, 562.1pt x 421.575pt>
 File: Images/leapfrog_wave.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_wave.jpg>
 Package pdftex.def Info: Images/leapfrog_wave.jpg used on input line 249.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
  [14 <./Images/leapfrog_wave_l2.jpg> <./Images/leapfrog_wave_l2_halfk.jpg>]
-<Images/leapfrog_wave_Nh.jpg, id=81, 570.13pt x 422.57875pt>
+<Images/leapfrog_wave_Nh.jpg, id=80, 570.13pt x 422.57875pt>
 File: Images/leapfrog_wave_Nh.jpg Graphic file (type jpg)
 
 <use Images/leapfrog_wave_Nh.jpg>
 Package pdftex.def Info: Images/leapfrog_wave_Nh.jpg used on input line 258.
 (pdftex.def)             Requested size: 285.0643pt x 211.28885pt.
-) (./4VNA.tex [15 <./Images/leapfrog_wave_l2_2k.jpg> <./Images/leapfrog_wave.jp
-g>] [16 <./Images/leapfrog_wave_Nh.jpg>]
+) (4VNA.tex [15 <./Images/leapfrog_wave_l2_2k.jpg> <./Images/leapfrog_wave.jpg>
+] [16 <./Images/leapfrog_wave_Nh.jpg>]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--30
@@ -584,7 +581,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--30
 
 [17
 
-] [18] [19] [20] [21]) (./5TE.tex [22]
+] [18] [19] [20] [21]) (5TE.tex [22]
 Chapter 5.
 [23
 
@@ -598,50 +595,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
 
-[24] <Images/lw_adv_4.jpg, id=115, 570.13pt x 422.57875pt>
+[24] <Images/lw_adv_4.jpg, id=114, 570.13pt x 422.57875pt>
 File: Images/lw_adv_4.jpg Graphic file (type jpg)
 
 <use Images/lw_adv_4.jpg>
 Package pdftex.def Info: Images/lw_adv_4.jpg used on input line 88.
 (pdftex.def)             Requested size: 285.0643pt x 211.28885pt.
 
-<Images/lw_adv_4_l2.jpg, id=116, 562.1pt x 421.575pt>
+<Images/lw_adv_4_l2.jpg, id=115, 562.1pt x 421.575pt>
 File: Images/lw_adv_4_l2.jpg Graphic file (type jpg)
 
 <use Images/lw_adv_4_l2.jpg>
 Package pdftex.def Info: Images/lw_adv_4_l2.jpg used on input line 95.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
  [25 <./Images/lw_adv_4.jpg>]
-<Images/5_lw_cl_ue.jpg, id=120, 562.1pt x 421.575pt>
+<Images/5_lw_cl_ue.jpg, id=119, 562.1pt x 421.575pt>
 File: Images/5_lw_cl_ue.jpg Graphic file (type jpg)
 
 <use Images/5_lw_cl_ue.jpg>
 Package pdftex.def Info: Images/5_lw_cl_ue.jpg used on input line 104.
 (pdftex.def)             Requested size: 281.04932pt x 210.78697pt.
 
-<Images/5_lw_compare.jpg, id=121, 562.1pt x 421.575pt>
+<Images/5_lw_compare.jpg, id=120, 562.1pt x 421.575pt>
 File: Images/5_lw_compare.jpg Graphic file (type jpg)
 
 <use Images/5_lw_compare.jpg>
 Package pdftex.def Info: Images/5_lw_compare.jpg used on input line 113.
 (pdftex.def)             Requested size: 140.92793pt x 105.69582pt.
 
-<Images/5_cl_compare.jpg, id=122, 562.1pt x 421.575pt>
+<Images/5_cl_compare.jpg, id=121, 562.1pt x 421.575pt>
 File: Images/5_cl_compare.jpg Graphic file (type jpg)
 
 <use Images/5_cl_compare.jpg>
 Package pdftex.def Info: Images/5_cl_compare.jpg used on input line 118.
 (pdftex.def)             Requested size: 140.92793pt x 105.69582pt.
 
-<Images/5_ue_compare.jpg, id=123, 570.13pt x 422.57875pt>
+<Images/5_ue_compare.jpg, id=122, 570.13pt x 422.57875pt>
 File: Images/5_ue_compare.jpg Graphic file (type jpg)
 
 <use Images/5_ue_compare.jpg>
 Package pdftex.def Info: Images/5_ue_compare.jpg used on input line 123.
 (pdftex.def)             Requested size: 140.92793pt x 104.45154pt.
- [26 <./Images/lw_adv_4_l2.jpg> <./Images/5_lw_cl_ue.jpg>]) (./6FCM.tex [27 <./
-Images/5_lw_compare.jpg> <./Images/5_cl_compare.jpg> <./Images/5_ue_compare.jpg
->]
+ [26 <./Images/lw_adv_4_l2.jpg> <./Images/5_lw_cl_ue.jpg>]) (6FCM.tex [27 <./Im
+ages/5_lw_compare.jpg> <./Images/5_cl_compare.jpg> <./Images/5_ue_compare.jpg>]
+
 Chapter 6.
 [28
 
@@ -650,45 +647,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--29
 
  []
 
-[29]) (./7SLM.tex
+[29]) (7SLM.tex
 Underfull \hbox (badness 10000) in paragraph at lines 66--1
 
  []
 
 [30]
 Chapter 7.
-) [31
+<Images/7_lw_lf_ue.jpg, id=140, 789.95125pt x 600.2425pt>
+File: Images/7_lw_lf_ue.jpg Graphic file (type jpg)
 
-] (./NMReport.aux) ) 
+<use Images/7_lw_lf_ue.jpg>
+Package pdftex.def Info: Images/7_lw_lf_ue.jpg used on input line 7.
+(pdftex.def)             Requested size: 328.82707pt x 249.85619pt.
+ [31
+
+ <./Images/7_lw_lf_ue.jpg>]
+
+LaTeX Warning: Reference `fig:mm_sb_mc' on page 32 undefined on input line 49.
+
+) (8IBE.tex [32]
+Chapter 8.
+) [33
+
+] (NMReport.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5789 strings out of 494953
- 85410 string characters out of 6180977
- 157452 words of memory out of 5000000
- 8944 multiletter control sequences out of 15000+600000
- 14561 words of font info for 56 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 38i,12n,42p,1053b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on NMReport.pdf (32 pages, 732592 bytes).
+ 5804 strings out of 493335
+ 85490 string characters out of 3139234
+ 162237 words of memory out of 3000000
+ 9200 multiletter control sequences out of 15000+200000
+ 14561 words of font info for 56 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,12n,42p,1123b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb>
+Output written on NMReport.pdf (34 pages, 787696 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
+ 206 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

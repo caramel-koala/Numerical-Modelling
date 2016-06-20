@@ -14,7 +14,7 @@ Flux Conservative Methods (FCMs) seek to evolve an equation by using the conserv
 \end{align*}
 Where $F(x,t)$ describes the flux through a point. This describes the fact that ``gas'' enters the region at $x_1$ and exits at $x_2$ and therefore $\frac{d}{dt}M(t)$ is conservative. This can then be extended to form what is know as conservative form as seen in Equation \ref{eq:conf}. Unlike the FDM, which uses the differential form of an equation to evolve it, FCM uses the integral form, $\frac{d}{dt}M(t)$, to evolve a solution. The schemes differ in the way in which the flux is calculated, with a more complex flux approximation yielding a higher accuracy.
 %------------------------------------------------------------------------------------------------
-\subsection{Reconstruction Methods}
+\subsection{Reconstruction Methods}\label{sec:recon}
 Also referred to as Reconstruct-Evolve-Average (R-E-A) algorithms, these work by assuming the function is made up of a set of piecewise constant values. The system is evolved by fist fitting the average value to a cell and assuming the value is constant across the cell (Reconstruction). The piecewise function is then evolved over one time step, with values of the cell being carried into one another. The new values are then averaged by the ``amount'' of the function which has left the cell and the amount which has entered. These methods can be improved by replacing the piecewise constant with sloping equations or with polynomials to allow for better accuracy with the function being smoother at the cell boundaries.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Advection by Flux Conservative Schemes}
@@ -63,8 +63,8 @@ The Piecewise Constant Method, also known as Godunov's Method, is a Reconstructi
             &= \frac{1}{h}(ckv^n_{j-1} + hv^n_j - ckv^n_j) \\
             &= v^n_j + \frac{ck}{h}(v^n_{j-1} - v^n_j) \\
             &= v^n_j - \frac{ck}{h}(v^n_j - v^n_{j-1}) \\
-\end{align*} 
+\end{align*}
 which again is exactly equivalent to the Upwind Euler Method.
 \\
 \\
-This therefore shows that while having different approaches, they all yield equivalent results.
+This therefore shows that while having different approaches, they all yield equivalent results. 
