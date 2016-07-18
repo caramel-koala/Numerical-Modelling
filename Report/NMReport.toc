@@ -45,4 +45,4 @@
 \contentsline {subsection}{\numberline {7.2.2}Superbee}{32}
 \contentsline {subsection}{\numberline {7.2.3}MC Mod}{32}
 \contentsline {subsection}{\numberline {7.2.4}Analysis}{32}
-\contentsline {chapter}{\numberline {8}The Inviscid Burgers' Equation}{33}
+\contentsline {chapter}{\numberline {8}The Inviscid Burgers' Equation}{34}

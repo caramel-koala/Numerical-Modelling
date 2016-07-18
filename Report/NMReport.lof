@@ -22,4 +22,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Comparison of Lax-Wendroff, Lax-Friedrich and Upwind Euler methods\relax }}{31}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Comparison of Minmod, Superbee and MC Mod methods\relax }}{33}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Evolution of Burgers' Equation using Upwind Euler, Lax-Friedrich and Lax-Wendroff\relax }}{35}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Evolution of Burgers' Equation using Minmod, Superbee and MC Mod\relax }}{36}
