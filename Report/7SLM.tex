@@ -1,7 +1,7 @@
 \chapter{Slope Limiter Methods}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Method Recap}
-In the Chapter 5, we looked at the Upwind Euler, Centered Leapfrog and Lax-Wendroff methods. Setting aside the Centered Leapfrog as it is the most inaccurate for evolving a step function, we now look at the Upwind, Lax-Wendroff and Lax-Friedrich instead. By looking at Figure \ref{fig:lw_lf_ue} we can see that the Lax-Wendroff performs the best, although marginally, against the other two methods on the Gaussian pulse but the worst at the heaviside step function. The Upwind Euler, however, performs best on the heaviside step function but none of these methods are able to adequately evolve the heaviside step without some form of sloping or erratic behaviour at the shock points. Therefore we need a method which adequately evolves both smooth, differentiable functions and functions with sharp points or steps, these are known as High-Resolution Methods or Slope/Flux Limiter Methods.
+In Chapter 5, we looked at the Upwind Euler, Centered Leapfrog and Lax-Wendroff methods. Setting aside the Centered Leapfrog as it is the most inaccurate for evolving a step function, we now look at the Upwind, Lax-Wendroff and Lax-Friedrich methods instead. By looking at Figure \ref{fig:lw_lf_ue} we can see that the Lax-Wendroff performs the best, although marginally, against the other two methods on the Gaussian pulse but the worst at the heaviside step function. The Upwind Euler, however, performs best on the heaviside step function, but none of these methods are able to adequately evolve the heaviside step without some form of sloping or erratic behaviour at the shock points. Therefore we need a method which adequately evolves both smooth, differentiable functions and functions with sharp points or steps These are known as High-Resolution Methods or Slope/Flux Limiter Methods.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{Images/7_lw_lf_ue.jpg}
@@ -38,10 +38,10 @@ The Superbee works by finding a maxmod (similar to a minmod) of two values of wh
   \sigma^n_j = \text{ maxmod}(\sigma^1,\sigma^2) \\
   \text{where:} \quad \sigma^1 = \text{ minmod}(\sigma_{ds},2\sigma_{us}) \quad \text{and} \quad \sigma^2 = \text{ minmod}(2\sigma_{ds},\sigma_{us})
 \end{gather*}
-It biases the weighings in such a way that even if one of the gradients is much larger than the other, the resulting gradient isn't too biased to the smaller gradient.
+It biases the weighings in such a way that even if one of the gradients is much larger than the other, the resulting gradient isn't too biased towards the smaller gradient.
 %------------------------------------------------------
 \subsection{MC Mod}
-The MC Mod method uses the minmod of all three gradient measures to determine the next value, it biases the value of the central slope as it is seen as the average of the three values.
+The MC Mod method uses the minmod of all three gradient measures to determine the next value. It biases the value of the central slope as it is seen as the average of the three values.
 \begin{equation*}
   \sigma^n_j = \text{ minmod}(\sigma_{cs},2\sigma_{us},2\sigma_{ds})
 \end{equation*}

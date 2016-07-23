@@ -40,12 +40,11 @@ which is a line with a slope of $c$ in the $(x,t)-plane$. Substituting this into
 \end{equation}
 %--------------------------------------------------------------------
 \subsection{Wave Equation}
-The Wave Equation is a second order PDE, therefore it has two characteristics. $p$ and
-$q$.By reducing the equation to its canonical form, $u_{pq} = 0$. In this we see that
+The Wave Equation is a second order PDE, therefore it has two characteristics: $p$ and $q$. By reducing the equation to its canonical form, $u_{pq} = 0$, we see that
 \begin{equation} \label{wavecoords}
 p = x-ct \qquad \text{and} \qquad q = x + ct
 \end{equation}
-Since $u_{pq} = u_{qp} = 0$ then it follows that $u_p = P(p)$. Let $F(p)$ be an anti-derivative of $P$ therefore $\frac{dF}{dp}(p) = P(p)$ and therefore
+Since $u_{pq} = u_{qp} = 0$ then it follows that $u_p = P(p)$. Let $F(p)$ be an anti-derivative of $P$. Therefore $\frac{dF}{dp}(p) = P(p)$ and therefore
 \begin{equation}
 \frac{\partial}{\partial p}(u - F(p)) = 0
 \end{equation}
@@ -53,14 +52,14 @@ by integrating both sides, it then follows that
 \begin{equation}
 u - F(p) = G(q)
 \end{equation}
-and therefore by rearranging and substituting Equation \ref{wavecoords}, we get
+and therefore, by rearranging and substituting Equation \ref{wavecoords}, we get
 \begin{equation}
 u(x,t) = F(x-ct) + G(x+ct)
 \end{equation}
-By analyzing this solution and comparing it to that of the Advection Equation, we see that we in fact get two characteristic coordinates which are lines with slopes of $\pm c$.
+By analyzing this solution and comparing it to that of the Advection Equation we see that we in fact get two characteristic coordinates which are lines with slopes of $\pm c$.
 %-------------------------------------------------------------------
 \subsection{Spacing}
-Along with finding the characteristics comes the trouble of determining the spacing for the spacial and time axis when plotting. The spacial spacing will be denoted by $h$ and time by $k$. If $h<k$ then the data needed to determine the value of the function at a given point in space and time will require data outside of the bounds of the stencil, conversely if $h>k$ then data between two spacial points is needed to calculate the next value, but this can be interpolated at the cost of calculation time and may yield a higher accuracy. The standard is to set $h=k$ so that the stencil exactly fits the data needed to calculate the next point and every point being used need not be interpolated as it falls on an existing point in the spacing. This can be seen in the figures in Figure \ref{fig:advcoordimg} for the Advection Equation and in Figure \ref{fig:wavecoordimg} for the Wave Equation.
+Along with finding the characteristics comes the trouble of determining the spacing for the spacial and time axes when plotting. The spacial spacing will be denoted by $h$ and time by $k$. If $h<k$ then the data needed to determine the value of the function at a given point in space and time will require data outside of the bounds of the stencil. Conversely if $h>k$ then data between two spacial points is needed to calculate the next value, but this can be interpolated at the cost of calculation time and may yield a higher accuracy. The standard is to set $h=k$ so that the stencil exactly fits the data needed to calculate the next point and every point being used need not be interpolated as it falls on an existing point in the spacing. This can be seen in Figure \ref{fig:advcoordimg} for the Advection Equation and in Figure \ref{fig:wavecoordimg} for the Wave Equation.
 %----------------------------------------------------------------------
 \begin{figure}[H]
 \centering
@@ -110,7 +109,7 @@ Along with finding the characteristics comes the trouble of determining the spac
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discretization}
-Using the FDM discussed in Chapter 2 we will confirm the validity of three approximations of the advection equation, the Centered Euler, Leapfrog, and Upwind Euler methods, and the Leapfrog approximation of the wave equation.
+Using the FDM discussed in Chapter 2 we will confirm the validity of three approximations of the advection equation - the Centered Euler, Leapfrog, and Upwind Euler methods; and the Leapfrog approximation of the wave equation.
 %-----------------------------------------------------------------
 \subsection{Advection Equation}
 The advection equation can be approximated with the function $v$ where
@@ -128,24 +127,24 @@ Substituting Equation \ref{advfdmx} and \ref{advfdmt} into the advection equatio
 \begin{equation}
   \partial_tv_i^j + c\partial_xv_i^j = 0
 \end{equation}
-however, $v_i^{j+1}$ is unknown. So we rearrange the equation to solve for $v_i^{j+1}$ to get
+However, $v_i^{j+1}$ is unknown. So we rearrange the equation to solve for $v_i^{j+1}$ to get
 \begin{align*}
     v_i^{j+1} &= v_i^{j-1} - 2ck\partial_xv_i^j \\
 	      &= v_i^{j-1} - c\frac{k}{h}(v_{i+1}^j - v_{i-1}^j) + O(h^2k^2)
 \end{align*}
-This is known as the ``Leapfrog'' method as it requires $v_i^{j-1}$ in order to calculate $v_i^{j+1}$ This can be somewhat problematic with the initial data as $v_i^0=u_0$ and $v_i^2$ onwards can be calculated this way but $v_i^1$ cannot be found by this method. Another problem concerining this method is the decoupling of odd and even points as all even points rely soley on the odd points of the previous time step and alternately for the odd points.
+This is known as the ``Leapfrog'' method as it requires $v_i^{j-1}$ in order to calculate $v_i^{j+1}$. This can be somewhat problematic with the initial data as $v_i^0=u_0$ and $v_i^2$ onwards can be calculated this way but $v_i^1$ cannot be found by this method. Another problem concerning this method is the decoupling of odd and even points as all even points rely solely on the odd points of the previous time step and alternately for the odd points.
 %-----------------------------------------------------------------
 \subsubsection{Centered Euler}
-The Centred Euler method seeks to circumvent this problem by setting
+The Centered Euler method seeks to circumvent this problem by setting
 \begin{equation}
 \partial_tv_i^j = \frac{v_i^{j+1} - v_i^j}{k} + O(k)
 \end{equation}
-substituting this into the advection equation and rearranging to solve for $v_i^{j+1}$ gives
+Substituting this into the advection equation and rearranging to solve for $v_i^{j+1}$ gives
 \begin{align*}
     v_i^{j+1} &= v_i^j - ck\partial_xv_i^j \\
 	      &= v_i^j - c\frac{k}{2h}(v_{i+1}^j - v_{i-1}^j) + O(kh^2)
 \end{align*}
-This method uses a one-sided time step to calculate the next step. This makes it unconditionally unstable and over time it varies wildly from the actual data. Due to the error being relatively low for the first step, it is generally used to initialise the Leapfrog method.
+This method uses a one-sided time step to calculate the next step. This makes it unconditionally unstable and over time it varies wildly from the actual data. Due to the error being relatively low for the first step, it is generally used to initialize the Leapfrog method.
 %-----------------------------------------------------------------
 \subsubsection{Upwind Euler}
 By setting
@@ -158,7 +157,7 @@ we get
     v_i^{j+1} &= v_i^j - ck\partial_xv_i^j \\
 	      &= v_i^j - c\frac{k}{h}(v_{i+1}^j - v_i^j) + O(kh)
 \end{align*}
-This is arguably the best method to calculate the advection equation as it uses a biased stencil to propel the data from $u_0$ along the $t$ and $x$ axis, much like the advection equation itself.
+This is arguably the best method to calculate the advection equation as it uses a biased stencil to propel the data from $u_0$ along the $t$ and $x$ axes, much like the advection equation itself.
 %-----------------------------------------------------------------
 \subsection{Wave Equation}
 Using the second order, second derivative FDM on $u$ with $v_i^j = u(x_i,t_j)$ we get
@@ -170,25 +169,25 @@ Substituting this into the wave equation we get
 \begin{equation}
   \partial_{tt}v_i^j - c^2\partial_{xx}v_i^j = 0
 \end{equation}
-As with the advection equation, $v_i^{j+1}$ is unknown. reaaringing to solve for this, we get
+As with the advection equation, $v_i^{j+1}$ is unknown. re-arranging to solve for this, we get
 \begin{equation}
   v_i^{j+1} = 2v_i^j - v_i^{j+1} + c^2\frac{k^2}{h^2}(v_{i+1}^j - 2v_i^j + v_{i-1}^j) + O(h^2k^2)
 \end{equation}
-This is a Leapfrog method approximation similar to that of the advection equation, it however does not have the decoupling of points as this stencil uses three points from the previous time step as opposed to the two used by the advection equation. This method also has the problem of $v_i^1$ being needed as initial data, this can usually be solved by calculating the row by hand and then feeding it into the system as initial data.
+This is a Leapfrog method approximation similar to that of the advection equation. It however does not have the decoupling of points as this stencil uses three points from the previous time step as opposed to the two used by the advection equation. This method also has the problem of $v_i^1$ being needed as initial data. This can usually be solved by calculating the row by hand and then feeding it into the system as initial data.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Implimentation}
+\section{Implementation}
 The initial equation
 \begin{equation}
   u(x,0) = e^{-x^2}
 \end{equation}
-was calculated on the interval $-10<x<10$ and $0<t<20$ with $100$ and $1000$ data points and compared to the exact solution, the L2-norm of the error was also analysed. For each solution the ghost points were a periodic extension of the previous steps data. The results were as follows
+was calculated on the interval $-10<x<10$ and $0<t<20$ with $100$ and $1000$ data points and compared to the exact solution. The L2-norm of the error was also analyzed. For each solution the ghost points were a periodic extension of the previous step's data. The results were as follows:
 %-------------------------------------------------------------------------------
 \subsection{Centered Euler Advection Equation}
 The exact solution to the equation is
 \begin{equation}
 u(x,t) = e^{-(x-t)^2}
 \end{equation}
-The wild variance of the Centered Euler method can be seen after only two seconds in Figure \ref{center_euler_adv}. The L2-norm of the error exponentially increases over time as seen in Figure \ref{center_euler_adv_l2}. The method generates high frequency noise which is amplified over time and the previous step's noise feeds into the next step to be increased again. This is due to $k=h$ and how this step ratio sits exactly on the bounds what can be seen as a stable causal step. If $k<h$ the stability of the metod would increase greatly.
+The wild variance of the Centered Euler method can be seen after only two seconds in Figure \ref{center_euler_adv}. The L2-norm of the error exponentially increases over time as seen in Figure \ref{center_euler_adv_l2}. The method generates high frequency noise which is amplified over time and the previous step's noise feeds into the next step to be increased again. This is due to $k=h$ and how this step ratio sits exactly on the bounds of what can be seen as a stable causal step. If $k<h$, the stability of the method would increase greatly.
 %-------------------------------------------------------------------------------
 \begin{figure}[H]
  \centering
@@ -204,7 +203,7 @@ The wild variance of the Centered Euler method can be seen after only two second
 \end{figure}
 %-------------------------------------------------------------------------------
 \subsection{Leapfrog Advection Equation}
-The L2-norm of the error as seen in Figure \ref{leapfrog_adv_l2} is due to the ghost points of the approximation being treated as a periodic extension of the function causing the function to be repeated every 20 time steps, the start of this can be seen in Figure \ref{leapfrog_adv}, which shows the functions after nine time steps. The error seems, in the early steps, to be much smaller than expected, $~10^{-15}$ instead of $~10^{-4}$ and $~10^{-8}$ for $N=100$ and $N=1000$ respectively. This is due to the ratio between the time, and spacial spacing being $k=h$, and that this perfectly projects the previous steps information to the next leading to a more precise approximation.
+The L2-norm of the error as seen in Figure \ref{leapfrog_adv_l2} is due to the ghost points of the approximation being treated as a periodic extension of the function causing the function to be repeated every 20 time steps. The start of this can be seen in Figure \ref{leapfrog_adv}, which shows the functions after nine time steps. The error seems, in the early steps, to be much smaller than expected: $~10^{-15}$ instead of $~10^{-4}$ and $~10^{-8}$ for $N=100$ and $N=1000$ respectively. This is due to the ratio between the time and spacial spacing being $k=h$, and the fact that this perfectly projects the previous steps information to the next, leading to a more precise approximation.
 %-------------------------------------------------------------------------------
 \begin{figure}[H]
  \centering
@@ -224,7 +223,7 @@ The d'Alembert solution to the equation is
 \begin{equation}
 u(x,t) = \frac{1}{2}(e^{-(x-t)^2} + e^{-(x+t)^2})
 \end{equation}
-Figure \ref{leapfrog_wave} shows how this approximation suffers from the same problem as the leapfrog advection approximation since it too has ghost points which see the function as a periodic extension and leads to the same problem of steps in the L2-norm of the error, shown in Figure \ref{leapfrog_wave_l2}. Adjusting the size of the time steps by making $k=0.5h$ should leads to a minor reduction in the L2-norm of the error, however this is not the case as with $h=k$, the Leapfrog Wave Approximation has the same effect as that of the Leapfrog Advection Approximation where data is perefectly projected from one time step to the next leading it to be more accurate than that of a smaller time step as seen in Figure \ref{leapfrog_wave_l2_halfk}. With the large steps due to the periodic extension this is almost unnoticeable, if the time step is doubled to $k=2h$ then the error increases exponentially over time after a relatively short period of time, seen in Figure \ref{leapfrog_wave_l2_2k}.
+Figure \ref{leapfrog_wave} shows how this approximation suffers from the same problem as the leapfrog advection approximation since it too has ghost points which see the function as a periodic extension and leads to the same problem of steps in the L2-norm of the error, shown in Figure \ref{leapfrog_wave_l2}. Adjusting the size of the time steps by making $k=0.5h$ should lead to a minor reduction in the L2-norm of the error. However this is not the case as with $h=k$ the Leapfrog Wave Approximation has the same effect as that of the Leapfrog Advection Approximation where data is perfectly projected from one time step to the next leading it to be more accurate than that of a smaller time step as seen in Figure \ref{leapfrog_wave_l2_halfk}. With the large steps due to the periodic extension this is almost unnoticeable. If the time step is doubled to $k=2h$ then the error increases exponentially over time after a relatively short period of time, as seen in Figure \ref{leapfrog_wave_l2_2k}.
 %-------------------------------------------------------------------------------
 \begin{figure}[H]
  \centering
@@ -251,7 +250,7 @@ Figure \ref{leapfrog_wave} shows how this approximation suffers from the same pr
  \label{leapfrog_wave}
 \end{figure}
 %-------------------------------------------------------------------------------
-By varying the spacial spacing size by setting $N=2^i$ where $i=6,\dots,12$ and fixing $k=0.001$ we can deterimine the relationship between the spacing and the L2-norm of the error, looking at this relationship at $t=5$ we get Figure \ref{leapfrog_wave_Nh}. As seen here, the logarithmic scaling of both axis produces a line graph with a slope of $-2$. This is due to the fact that the error of the leapfrog is proportional to $h^2$, which, when logarithmicly scaled, goes as $2log(h)$, to produce the straight line.
+By varying the spacial spacing size by setting $N=2^i$ where $i=6,\dots,12$ and fixing $k=0.001$ we can determine the relationship between the spacing and the L2-norm of the error. Looking at this relationship at $t=5$ we get Figure \ref{leapfrog_wave_Nh}. As seen here, the logarithmic scaling of both axes produces a line graph with a slope of $-2$. This is due to the fact that the error of the leapfrog is proportional to $h^2$, which, when logarithmically scaled, goes as $2log(h)$ to produce the straight line.
 %-------------------------------------------------------------------------------
 \begin{figure}[H]
  \centering

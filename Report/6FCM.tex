@@ -1,31 +1,31 @@
 \chapter{Flux Conservative Methods}
-In this chapter we will analyze the different types of discrete evolutionary methods. We will then more deeply analyze the Flux Conservative and REA schemes and see how they are similar in  their solutions although very different in how they approach the problem.
+In this chapter we will analyze the different types of discrete evolutionary methods. We will then more deeply analyze the Flux Conservative and REA schemes and see how they are similar in  their solutions, although very different in how they approach the problem.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Comparison of Methods}
-Discrete evolutionary methods can be grouped into three main classes, each different in the way in which the approach the problem of numerically approximating the solution of an equation. All of these methods work by initially turning the continuous initial solution into a discrete set of points but differ in how they use these points to obtain a solution. Therefore with all of these solutions, using a smaller spacing with a finer mesh allows for greater accuracy.
+Discrete evolutionary methods can be grouped into three main classes each different in the way in which the approach the problem of numerically approximating the solution of an equation. All of these methods work by initially turning the continuous initial solution into a discrete set of points, but differ in how they use these points to obtain a solution. Therefore, with all of these solutions, using a smaller spacing with a finer mesh allows for greater accuracy.
 \subsection{Finite Differencing}
 The Finite Difference Method (FDM) solves a differential equation by approximating the solution by solving reordered Taylor polynomials. Depending on how these polynomials are used and to what order the Taylor series is expanded, many different solution forms can be obtained. These solutions are more accurate with a higher order expansion, but at the cost of being more expensive to calculate.
 %------------------------------------------------------------------------------------------------
 \subsection{Flux Conservation}
-Flux Conservative Methods (FCMs) seek to evolve an equation by using the conservation laws to preserve a conservative property of the system, namely $u(x,t)$. By comparing $u(x,t)$ to, for example, the physical form of the density of a gas in a sealed pipe we can assume that the total amount of gas in the pipe is constant. The amount of gas between two points, $x_1$ and $x_2$, described by $M(t)=\int_{x_1}^{x_2}u(x,t)dx$, will change over time as
+Flux Conservative Methods (FCM) seek to evolve an equation by using the conservation laws to preserve a conservative property of the system, namely $u(x,t)$. By comparing $u(x,t)$ to, for example, the physical form of the density of a gas in a sealed pipe we can assume that the total amount of gas in the pipe is constant. The amount of gas between two points, $x_1$ and $x_2$, described by $M(t)=\int_{x_1}^{x_2}u(x,t)dx$, will change over time as
 \begin{align*}
   \frac{d}{dt}M(t)	&= \frac{d}{dt}\int_{x_1}^{x_2}u(x,t)dx  	\\
 		        &= F(x_1,t) - F(x_2,t)				\\
 \end{align*}
-Where $F(x,t)$ describes the flux through a point. This describes the fact that ``gas'' enters the region at $x_1$ and exits at $x_2$ and therefore $\frac{d}{dt}M(t)$ is conservative. This can then be extended to form what is know as conservative form as seen in Equation \ref{eq:conf}. Unlike the FDM, which uses the differential form of an equation to evolve it, FCM uses the integral form, $\frac{d}{dt}M(t)$, to evolve a solution. The schemes differ in the way in which the flux is calculated, with a more complex flux approximation yielding a higher accuracy.
+where $F(x,t)$ describes the flux through a point. This describes the fact that ``gas'' enters the region at $x_1$ and exits at $x_2$ and therefore $\frac{d}{dt}M(t)$ is conservative. This can then be extended to form what is know as conservative form as seen in Equation \ref{eq:conf}. Unlike the FDM, which uses the differential form of an equation to evolve it, FCM uses the integral form, $\frac{d}{dt}M(t)$, to evolve a solution. The schemes differ in the way in which the flux is calculated, with a more complex flux approximation yielding a higher accuracy.
 %------------------------------------------------------------------------------------------------
 \subsection{Reconstruction Methods}\label{sec:recon}
-Also referred to as Reconstruct-Evolve-Average (R-E-A) algorithms, these work by assuming the function is made up of a set of piecewise constant values. The system is evolved by fist fitting the average value to a cell and assuming the value is constant across the cell (Reconstruction). The piecewise function is then evolved over one time step, with values of the cell being carried into one another. The new values are then averaged by the ``amount'' of the function which has left the cell and the amount which has entered. These methods can be improved by replacing the piecewise constant with sloping equations or with polynomials to allow for better accuracy with the function being smoother at the cell boundaries.
+Also referred to as Reconstruct-Evolve-Average (REA) algorithms, these work by assuming the function is made up of a set of piecewise constant values. The system is evolved by first fitting the average value to a cell and assuming the value is constant across the cell (Reconstruct). The piecewise function is then evolved over one time step, with values of the cell being carried into one another (Evolve). The new values are then averaged by the ``amount'' of the function which has left the cell and the amount which has entered (Average). These methods can be improved by replacing the piecewise constant with sloping equations or with polynomials to allow for better accuracy with the function being smoother at the cell boundaries.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Advection by Flux Conservative Schemes}
-Implementing the advection equation using a FCM we can see that the optimal flux boundaries can be given by the midpoint between two discrete points. Setting these boundaries as the boundaries of a cell, we can set the flux as the average value of the cell. For some $x_j$ this is then given as $v_j=[x_{j-1/2},x_{j+1/2}]$ with $x_{j+1/2} = x_j + h/2$. We also see that the flux at a given point is proportional to the value of the function in that cell at that point in time, $v_j^n$, and the speed at which the flux propagates, $c$. Therefore the flux at the cell $v_j$ at time $t^n$ can be written as
+Implementing the advection equation using an FCM we can see that the optimal flux boundaries can be given by the midpoint between two discrete points. Setting these boundaries as the boundaries of a cell, we can set the flux as the average value of the cell. For some $x_j$ this is then given as $v_j=[x_{j-1/2},x_{j+1/2}]$ with $x_{j+1/2} = x_j + h/2$. We also see that the flux at a given point is proportional to the value of the function in that cell at that point in time, $v_j^n$, and the speed at which the flux propagates, $c$. Therefore the flux at the cell $v_j$ at time $t^n$ can be written as
 \begin{equation}\label{eq:adv_flux}
   F^n_{j+1/2} =cv^n_j
 \end{equation}
 The adjustment of $1/2$ is due to the fact that the center of a flux cell lies in between two points.
 \\
 \\
-The value of the cell can be seen as the average value of the function between its boundaries, $v^n_j=\frac{1}{h}\int_{x_{j-1/2}}^{x_{j+1/2}}u(x,t^n)dx$, and similarly, $v^{n+1}_j=\frac{1}{h}\int_{x_{j-1/2}}^{x_{j+1/2}}u(x,t^{n+1})dx$. The flux, or change in the value for the cell over its domain from $t^n$ to $t^{n+1}$ can therefore be seen as $hv^{n+1}_j - hv^n_j$ which is equivalent to the difference in the flux values at the boundaries over the time step, $kF^n_{j-1/2} - kF^n_{j+1/2}$. The flux can therefore be seen as the collection of instantaneous fluxes,
+The value of the cell can be seen as the average value of the function between its boundaries, $v^n_j=\frac{1}{h}\int_{x_{j-1/2}}^{x_{j+1/2}}u(x,t^n)dx$, and similarly, $v^{n+1}_j=\frac{1}{h}\int_{x_{j-1/2}}^{x_{j+1/2}}u(x,t^{n+1})dx$. The flux, or change, in the value for the cell over its domain from $t^n$ to $t^{n+1}$ can therefore be seen as $hv^{n+1}_j - hv^n_j$ which is equivalent to the difference in the flux values at the boundaries over the time step, $kF^n_{j-1/2} - kF^n_{j+1/2}$. The flux can therefore be seen as the collection of instantaneous fluxes:
 \begin{equation*}
   F^n_{j-1/2} = \int_{t^{n+1}}^{t^n}f(x_{i-1/2},t)dt
 \end{equation*}
@@ -35,7 +35,7 @@ Now we have
   v^{n+1}_j - v^n_j     &= \frac{k}{h}(cv^n_{j-1} - cv^n_j)\\
   v^{n+1}_j             &= v^n_j - \frac{ck}{h}(v^n_{j} - v^n_{j-1}) \label{eq:flux_upwind}
 \end{align}
-which is the Upwind Euler method. It should be noted that the FCM relies on the value from one cell being projected to its neighbours, therefore $ck\leq h$, meaning that the Courant stability condition must hold as a restriction for these methods.
+which is the Upwind Euler method. It should be noted that the FCM relies on the value from one cell being projected to its neighbors, therefore $ck\leq h$, meaning that Courant's stability condition must hold as a restriction for these methods.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Lax-Friedrich as a Flux Conservative Scheme}
 By observing Equation \ref{eq:flux_upwind}, we can see that the general form of a Flux Conservative method is
@@ -57,7 +57,7 @@ Now we can see that our flux function is
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Godunov's Method}
-The Piecewise Constant Method, also known as Godunov's Method, is a Reconstructive Method. Similarly, the constant value assigned to the cell is the average of the cell whose boundaries are again defined as $[x_{j-1/2},x_{j+1/2}]$. The value of the cell is again defined as $v^n_j=\frac{1}{h}\int_{x_{j-1/2}}^{x_{j+1/2}}u(x,t^n)dx$. With the advection equation specifically this value is shifted across at the rate of $ck$ with a cell width of $h$. This propagated value is again then averaged as the value of $v^{n+1}_j$. For the advection equation this can be seen as
+The Piecewise Constant Method, also known as Godunov's Method, is a Reconstructive Method. Similarly, the constant value assigned to the cell is the average of the cell whose boundaries are again defined as $[x_{j-1/2},x_{j+1/2}]$. The value of the cell is again defined as $v^n_j=\frac{1}{h}\int_{x_{j-1/2}}^{x_{j+1/2}}u(x,t^n)dx$. With the advection equation specifically this value is shifted across at the rate of $ck$ with a cell width of $h$. This propagated value is again then averaged as the value of $v^{n+1}_j$. For the advection equation, this can be seen as
 \begin{align*}
   v^{n+1}_j &= \frac{1}{h}(ckv^n_{j-1} + (h-ck)v^n_j) \\
             &= \frac{1}{h}(ckv^n_{j-1} + hv^n_j - ckv^n_j) \\
@@ -67,4 +67,4 @@ The Piecewise Constant Method, also known as Godunov's Method, is a Reconstructi
 which again is exactly equivalent to the Upwind Euler Method.
 \\
 \\
-This therefore shows that while having different approaches, they all yield equivalent results. 
+This therefore shows that while having different approaches they all yield equivalent results. 

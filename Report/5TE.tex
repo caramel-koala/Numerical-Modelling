@@ -1,9 +1,9 @@
 \chapter{Time Evolutions}
-In this chapter we will be looking a the conservative form of an equation. An equation is said to be in it's conservative form if it can be written as:
+In this chapter we will be looking at the conservative form of an equation. An equation is said to be in it's conservative form if it can be written as:
 \begin{equation} \label{eq:conf}
   u_t + F(x,u)_x = 0
 \end{equation}
-The advection and diffusion equations can therefore be written in conservative form, as well as Burger's equation.
+The advection and diffusion equations, as well as Burger's equation, can therefore be written in conservative form.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Lax-Friedrichs}
 The Lax-Friedrichs (LF) time evolutions scheme for conservative equation is given by:
@@ -14,7 +14,7 @@ Focusing on the first term of the LF method, we see
 \begin{equation*}
   \frac{1}{2}(v^n_{j+1} + v^n_{j-1}) = v^n_j + \frac{1}{2}(v^n_{j+1} - 2v^n_j + v^n_{j-1})
 \end{equation*}
-If $F^n_j$ is then set to $cv^n_j$, we then get the centered Euler form of the advection equation with this second derivative component. This component then warps the advection equation to
+If $F^n_j$ is then set to $cv^n_j$, we get the centered Euler form of the advection equation with this second derivative component. This component then warps the advection equation to
 \begin{equation*}
  u_t + cu_x = \frac{h^2}{2k}u_{xx}
 \end{equation*}
@@ -22,10 +22,10 @@ This gives the centered Euler a dissipative term, $\epsilon = \frac{h^2}{2k}$. S
 \begin{equation*}
   \epsilon = \frac{1}{2}\zeta h
 \end{equation*}
-Therefore as $h\rightarrow 0$, $\epsilon\rightarrow0$, and the exact form of the advection equation is formed. This is known as artificial dissipation and is used to stabilize an unstable scheme. It is also known as Kreiss-Oliger dissipation.
+Therefore as $h\rightarrow 0$, $\epsilon\rightarrow0$, and the exact form of the advection equation is formed. This is known as artificial dissipation and is used to stabilize an unstable scheme. It is also known as the Kreiss-Oliger dissipation.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Lax-Wendroff}
-The Lax-Wendroff (LW) scheme uses the LF scheme to first obtain a ``half step'', which it then uses to perform a leapfrog=like step to achieve the next time step. The half steps are given as:
+The Lax-Wendroff (LW) scheme uses the LF scheme to first obtain a ``half step'', which it then uses to perform a leapfrog-like step to achieve the next time step. The half steps are given as:
 \begin{align*}
   v^{n+1/2}_{j-1/2} &\simeq \frac{1}{2}(v^n_j + v^n_{j-1}) - \frac{k}{2h}(F^n_j-F^n_{j-1})\\
   v^{n+1/2}_{j+1/2} &\simeq \frac{1}{2}(v^n_{j+1} + v^n_j) - \frac{k}{2h}(F^n_{j+1}-F^n_j)\\
@@ -42,26 +42,26 @@ For the advection equation specifically, we can derive the LW scheme with $F$ se
   v^{n+1/2}_{j-1/2} &\simeq \frac{1}{2}(v^n_j + v^n_{j-1}) - \frac{ck}{2h}(v^n_j-v^n_{j-1})\\
   v^{n+1/2}_{j+1/2} &\simeq \frac{1}{2}(v^n_{j+1} + v^n_j) - \frac{ck}{2h}(v^n_{j+1}-v^n_j)\\
 \end{align*}
-as the half steps. Therefore the full scheme is
+as the half steps. Therefore the full scheme is:
 \begin{align*}
   v^{n+1}_j &\simeq v^n_j-\frac{ck}{h}\big(\frac{1}{2}(v^n_j + v^n_{j-1}) - \frac{ck}{2h}(v^n_j-v^n_{j-1})- \frac{1}{2}(v^n_{j+1} + v^n_j) - \frac{ck}{2h}(v^n_{j+1}-v^n_j)\big)\\
   v^{n+1}_j &\simeq v^n_j-\frac{ck}{2h}(v^n_{j+1} - v^n_{j-1}) + \frac{c^2k^2}{2h^2}(v^n_{j+1} -2v^n_j + v^n_{j-1})
 \end{align*}
-We can see that this is similar to LF scheme for the advection equation, but with $\epsilon=c^2k^2/2$ as part of the dissipative term. Unlike the LF scheme however, the dissipative term is not dependent on $h$ which would result in a fixed $\zeta$, but rather, due to this, it may be subject to amplitude dissipation. We can check this by using Von Neumann analysis on the scheme.
+We can see that this is similar to the LF scheme for the advection equation, but with $\epsilon=c^2k^2/2$ as part of the dissipative term. Unlike the LF scheme however, the dissipative term is not dependent on $h$ which would result in a fixed $\zeta$, but rather, due to this, it may be subject to amplitude dissipation. We can check this by using Von Neumann analysis on the scheme.
 \\
 \\
 Start by setting
 \begin{equation*}
   v^n_j = \hat{v}^n(\omega)e^{i\omega hj}
 \end{equation*}
-substituting this into the LW scheme advection equation, we get
+substituting this into the LW scheme advection equation, we get:
 \begin{align*}
   \hat{v}^{n+1}e^{i\omega hj} &= \hat{v}^ne^{i\omega hj}-\frac{ck}{2h}(\hat{v}^ne^{i\omega h(j+1)} - \hat{v}^ne^{i\omega h(j-1)}) + \frac{c^2k^2}{2h^2}(\hat{v}^ne^{i\omega h(j+1)} -2\hat{v}^ne^{i\omega hj} + \hat{v}^ne^{i\omega h(j-1)}) \\
   \hat{Q}\hat{v}^ne^{i\omega hj} &= \hat{v}^ne^{i\omega hj} \big(1 - \frac{ck}{2h}(e^{i\omega h}+e^{-i\omega h}) + \frac{c^2k^2}{2h^2}(e^{i\omega h} -2+ e^{-i\omega h})\big)\\
   \hat{Q} &= 1 - \frac{ck}{2h}(e^{i\omega h}-e^{-i\omega h}) + \frac{c^2k^2}{2h^2}(e^{i\omega h} -2+ e^{-i\omega h})\\
   \hat{Q} &= 1 - i\frac{ck}{h}\sin\omega h - \frac{c^2k^2}{h^2}(1 - \cos\omega h)\\
 \end{align*}
-Setting $\frac{ck}{h}=\alpha$ and solving for $||\hat{Q}||^2$, we get
+Setting $\frac{ck}{h}=\alpha$ and solving for $||\hat{Q}||^2$, we get:
 \begin{align*}
   ||\hat{Q}||^2 &= (1 - \alpha^2(1 - \cos\omega h))^2 + (\alpha\sin\omega h)^2\\
   ||\hat{Q}||^2 &= 1 - 2\alpha^2(1 - \cos\omega h) + \alpha^4(1 - \cos\omega h)^2 + \alpha^2\sin^2\omega h\\
@@ -93,11 +93,11 @@ Implementing this scheme with the advection equation of a Gaussian pulse with $c
 \begin{figure}[H]
  \centering
  \includegraphics[scale=0.5]{Images/lw_adv_4_l2.jpg}
- \caption{L2 norm of the Error of Lax-Wendroff Approximation over 4 seconds}
+ \caption{L2-norm of the Error of Lax-Wendroff Approximation over 4 seconds}
  \label{laxwen_adv_l2}
 \end{figure}
 %------------------------------------------------------------------------------------------------------------------------------------------
-Comparing the Lax-Wendroff to the Centered Leapfrog and Upwind Euler, we find that it is not as accurate at evolving the function as the Upwind Euler but it compares favourably to the Centered Leapfrog as shown by Figure \ref{fig:stepcompare} and with the different step sizes analyzed in Figure \ref{fig:ncompare} where it can clearly be seen that the largest error lies on the step.
+Comparing the Lax-Wendroff to the Centered Leapfrog and Upwind Euler, we find that it is not as accurate at evolving the function as the Upwind Euler, but it compares favorably to the Centered Leapfrog as shown by Figure \ref{fig:stepcompare} and with the different step sizes analyzed in Figure \ref{fig:ncompare} where it can clearly be seen that the largest error lies on the step.
 %------------------------------------------------------------------------------------------------------------------------------------------
 \begin{figure}[H]
  \centering

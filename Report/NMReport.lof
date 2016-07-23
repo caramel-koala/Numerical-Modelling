@@ -16,7 +16,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Lax-Wendroff Approximation after 4 seconds\relax }}{25}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces L2 norm of the Error of Lax-Wendroff Approximation over 4 seconds\relax }}{26}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces L2-norm of the Error of Lax-Wendroff Approximation over 4 seconds\relax }}{26}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Comparing Lax-Wendroff, Centered Leapfrog and Upwind Euler.\relax }}{26}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Comparison of methods at different step sizes.\relax }}{27}
 \addvspace {10\p@ }
